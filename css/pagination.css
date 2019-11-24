@@ -1,0 +1,29 @@
+/* PAGINATION */
+.pagination {
+  position: fixed;
+  top: 90px;
+  right: 50px;
+  z-index: 10; }
+
+.pagination__link {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: 3px;
+  position: relative; }
+  .pagination__link--active {
+    border-color: #fff; }
+  .pagination__link:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }

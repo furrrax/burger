@@ -1,0 +1,67 @@
+/* FEATURES */
+.features {
+  background: url("../img/features/features-bg.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.features__container {
+  text-align: center; }
+
+.features__title {
+  color: #2f3234; }
+
+.features__content {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.features__item {
+  width: calc((100% - 70px) / 3); }
+
+.features__item-pic {
+  margin: 0 auto; }
+  .features__item-pic--meat {
+    width: 97px;
+    height: 89px;
+    background: url("../img/features/features-sprite.png") -211px -10px; }
+  .features__item-pic--hand {
+    width: 73px;
+    height: 85px;
+    background: url("../img/features/features-sprite.png") -10px -10px; }
+  .features__item-pic--leaf {
+    width: 88px;
+    height: 75px;
+    background: url("../img/features/features-sprite.png") -103px -10px; }
+
+.features__item-title {
+  margin-top: 32px;
+  font-family: 'lifehack';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  color: #2f3234; }
+
+.features__item-desc {
+  margin-top: 25px;
+  font-family: 'ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: #6a6a6a;
+  word-wrap: break-word;
+  line-height: 150%; }

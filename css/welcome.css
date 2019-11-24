@@ -1,0 +1,74 @@
+/* WELCOME */
+.welcome {
+  background: url("../img/welcome/background.jpg") center center no-repeat;
+  background-size: cover;
+  overflow: inherit;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.welcome__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.banner__img {
+  width: 451px;
+  height: 424px; }
+
+.banner__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: 13px; }
+
+.title {
+  font-family: 'gagalin';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 72px;
+  color: #f9b43b; }
+
+.banner__text {
+  font-family: 'lifehack';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 65px;
+  color: #fff; }
+
+.welcome__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 40px; }
+
+.welcome__arrow-link {
+  width: 29px;
+  height: 14px;
+  background: url(../img/welcome/arrow-scroll.png); }
