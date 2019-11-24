@@ -116,7 +116,7 @@ a {
   margin-right: 11px;
   margin-left: 11px; }
 
-.header__nav-item--first:before {
+.header__nav-item:first-child:before {
   display: none; }
 
 .header__nav-link {

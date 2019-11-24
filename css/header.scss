@@ -23,7 +23,8 @@
     justify-content: center;
 }
 
-.header__nav-item:before {
+.header__nav-item {
+    &:before {
     content: '';
     display: inline-block;
     height: 4px;
@@ -33,10 +34,10 @@
     vertical-align: middle;
     margin-right: 11px;
     margin-left: 11px;
-}
-
-.header__nav-item--first:before {
-    display: none;
+    }
+    &:first-child:before {
+        display: none;
+    }
 }
 
 .header__nav-link {
