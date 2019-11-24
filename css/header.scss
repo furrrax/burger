@@ -1,11 +1,11 @@
 /* HEADER */
 
 .header__wrapper {
-    margin-top: 15px;
+    padding-top: 15px;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
     width: inherit;
 }
 
