@@ -240,20 +240,8 @@ a {
 .features__item {
   width: calc((100% - 70px) / 3); }
 
-.features__item-pic {
+.features__pic {
   margin: 0 auto; }
-  .features__item-pic--meat {
-    width: 97px;
-    height: 89px;
-    background: url("../img/features/features-sprite.png") -211px -10px; }
-  .features__item-pic--hand {
-    width: 73px;
-    height: 85px;
-    background: url("../img/features/features-sprite.png") -10px -10px; }
-  .features__item-pic--leaf {
-    width: 88px;
-    height: 75px;
-    background: url("../img/features/features-sprite.png") -103px -10px; }
 
 .features__item-title {
   margin-top: 32px;
