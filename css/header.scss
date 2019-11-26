@@ -1,7 +1,7 @@
 /* HEADER */
 
 .header__wrapper {
-    padding-top: 15px;
+    padding-top: 10px;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -32,8 +32,8 @@
     border-radius: 50%;
     background-color: $white;
     vertical-align: middle;
-    margin-right: 11px;
-    margin-left: 11px;
+    margin-right: 9px;
+    margin-left: 9px;
     }
     &:first-child:before {
         display: none;
@@ -47,6 +47,7 @@
     font-size: 13px;
     color: $white;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .header__order {

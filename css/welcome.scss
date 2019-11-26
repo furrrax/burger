@@ -25,10 +25,11 @@
 }
 
 .banner__description {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 13px;
+    justify-content: center; */
+    padding-left: 28px;
+    padding-top: 137px;
 }
 
 .title {
@@ -39,12 +40,20 @@
     color: #f9b43b;
 }
 
+.banner__title {
+    display: inline-block;
+}
+
 .banner__text {
     font-family: 'lifehack';
     font-weight: 500;
     font-style: normal;
     font-size: 65px;
     color: $white;
+    display: inline-block;
+    margin-top: 19px;
+    line-height: 61px;
+    letter-spacing: -2px;
 }
 
 .welcome__arrow {

@@ -6,8 +6,7 @@
     height: 100vh;
     overflow: inherit;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .features__container {
@@ -19,13 +18,13 @@
 }
 
 .features__content {
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
 
 .features__item {
-    width: calc((100% - 70px) / 3);
+    width: calc((100% - 45px) / 3);
 }
 
 .features__pic {

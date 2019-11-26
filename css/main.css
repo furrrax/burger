@@ -77,7 +77,7 @@ a {
 
 /* HEADER */
 .header__wrapper {
-  padding-top: 15px;
+  padding-top: 10px;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,8 +113,8 @@ a {
   border-radius: 50%;
   background-color: #fff;
   vertical-align: middle;
-  margin-right: 11px;
-  margin-left: 11px; }
+  margin-right: 9px;
+  margin-left: 9px; }
 
 .header__nav-item:first-child:before {
   display: none; }
@@ -125,7 +125,8 @@ a {
   font-style: normal;
   font-size: 13px;
   color: #fff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 .header__order {
   margin-left: 15px; }
@@ -164,17 +165,11 @@ a {
   height: 424px; }
 
 .banner__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-left: 13px; }
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  padding-left: 28px;
+  padding-top: 137px; }
 
 .title {
   font-family: 'gagalin';
@@ -183,12 +178,19 @@ a {
   font-size: 72px;
   color: #f9b43b; }
 
+.banner__title {
+  display: inline-block; }
+
 .banner__text {
   font-family: 'lifehack';
   font-weight: 500;
   font-style: normal;
   font-size: 65px;
-  color: #fff; }
+  color: #fff;
+  display: inline-block;
+  margin-top: 19px;
+  line-height: 61px;
+  letter-spacing: -2px; }
 
 .welcome__arrow {
   display: -webkit-box;
@@ -214,13 +216,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .features__container {
   text-align: center; }
@@ -229,7 +227,7 @@ a {
   color: #2f3234; }
 
 .features__content {
-  margin-top: 60px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,7 +236,7 @@ a {
   justify-content: space-between; }
 
 .features__item {
-  width: calc((100% - 70px) / 3); }
+  width: calc((100% - 45px) / 3); }
 
 .features__pic {
   margin: 0 auto; }
