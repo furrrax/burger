@@ -599,6 +599,17 @@ section {
 .team__name {
   font-family: 'gagalin';
   font-weight: 400; }
+  .team__name:before {
+    content: '';
+    border: 8px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-top-color: #f9b43b;
+    border-bottom-width: 0;
+    border-right-width: 5px;
+    border-left-width: 5px;
+    margin-right: 10px;
+    display: inline-block; }
 
 .team__item {
   margin-bottom: 40px;
@@ -609,6 +620,11 @@ section {
     margin-bottom: 0; }
   .team__item--active .team__name {
     color: #f9b43b; }
+    .team__item--active .team__name:before {
+      content: '';
+      border-bottom-width: 8px;
+      border-bottom-color: #f9b43b;
+      border-top-width: 0; }
   .team__item--active .team__content {
     height: 100%; }
 
