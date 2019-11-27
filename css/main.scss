@@ -1,12 +1,14 @@
 $orange: #e45028;
 $white: #fff;
 $black: #2f3234;
+$yellow: #f9b43b;
 
-@import "normalize.css";
+@import "normalize.scss";
 @import "fonts.scss";
 @import "base.scss";
 @import "header.scss";
 @import "welcome.scss";
 @import "features.scss";
 @import "reviews.scss";
-@import "pagination.scss"
+@import "team.scss";
+@import "pagination.scss";

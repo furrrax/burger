@@ -32,6 +32,18 @@ a {
     margin: 0 auto;
 }
 
+section {
+    min-height: 650px;
+}
+
+.title {
+    font-family: 'gagalin';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 72px;
+    color: $yellow;
+}
+
 .button {
     border-radius: 5px;
     padding: 10px 15px;
