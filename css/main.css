@@ -382,10 +382,14 @@ section {
   text-transform: uppercase;
   text-align: center; }
 
-/* HEADER */
+.header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%; }
+
 .header__wrapper {
   padding-top: 10px;
-  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -449,7 +453,7 @@ section {
   height: 424px; }
 
 .banner__description {
-  padding-left: 28px;
+  margin-left: 28px;
   padding-top: 137px; }
 
 .banner__title {
@@ -661,6 +665,81 @@ section {
   font-size: 14px;
   color: #fff;
   font-style: normal; }
+
+.menu {
+  background: url("/img/menu/menu-bg.jpg") center center no-repeat;
+  background-size: cover;
+  overflow: inherit;
+  height: 100vh;
+  position: relative; }
+
+.menu__title {
+  margin-top: 110px;
+  margin-left: 95px;
+  color: #fff; }
+
+.menu__accordeon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  max-width: 45%; }
+
+.menu__item--active .menu__desc {
+  width: 100%;
+  overflow: visible;
+  background-color: rgba(49, 52, 54, 0.9); }
+
+.menu__pic {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+  .menu__pic--meat {
+    background: url("/img/menu/for-meat-eater.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .menu__pic--veg {
+    background: url("/img/menu/for-vegetarian.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .menu__pic--diet {
+    background: url("/img/menu/for-dietary.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+.menu__subtitle {
+  font-size: 40px;
+  color: #fff;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  padding-top: 40px; }
+
+.menu__desc {
+  width: 0;
+  overflow: hidden;
+  font-family: 'ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: #fff; }
+
+.map {
+  background: url("../img/map/map-bg.jpg") center center no-repeat;
+  background-size: cover;
+  overflow: inherit;
+  height: 100vh; }
+
+.footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 60px;
+  background-color: #111111; }
 
 /* PAGINATION */
 .pagination {
