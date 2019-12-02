@@ -1061,6 +1061,11 @@ section {
     .footer__address {
       margin-bottom: 0.625rem; } }
 
+.footer__phone-img {
+  width: 0.75rem;
+  height: 0.6875rem;
+  margin-right: 0.3125rem; }
+
 .footer__phone {
   font-family: 'ubuntu';
   font-weight: 700;
@@ -1081,7 +1086,7 @@ section {
   .footer__item:first-child {
     margin-left: 0; }
 
-.footer__img {
+.footer__socials-img {
   width: 1.25rem;
   height: 1.25rem; }
 

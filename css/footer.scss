@@ -38,6 +38,12 @@
     }
 }
 
+.footer__phone-img {
+    width: rem(12px);
+    height: rem(11px);
+    margin-right: rem(5px);
+}
+
 .footer__phone {
     font-family: 'ubuntu';
     font-weight: 700;
@@ -64,6 +70,6 @@
     }
 }
 
-.footer__img {
+.footer__socials-img {
     width: rem(20px); height: rem(20px);
 }
