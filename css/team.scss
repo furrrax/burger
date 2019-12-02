@@ -13,23 +13,40 @@
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 113px 95px;
+    padding: rem(113px) rem(95px);
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .team__accordeon {
-    margin-top: 55px;
+    margin-top: rem(55px);
 }
 
 .team__name {
     font-family: 'gagalin';
     font-weight: 400;
+
+    &:before {
+        content: '';
+        border: 8px solid transparent;
+        width: 0px;
+        height: 0px;
+        border-top-color: #f9b43b;
+        border-bottom-width: 0;
+        border-right-width: 5px;
+        border-left-width: 5px;
+        margin-right: 10px;
+        display: inline-block;
+    }
 }
 
 .team__item {
-    margin-bottom: 40px;
-    display: flex;
+    margin-bottom: rem(40px);
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; */
     &:last-child {
         margin-bottom: 0;
     }
@@ -37,6 +54,13 @@
     &--active {
         .team__name {
             color: $yellow;
+
+            &:before {
+                content: '';
+                border-bottom-width: 8px;
+                border-bottom-color: #f9b43b;
+                border-top-width: 0;
+            }
         }
         .team__content{
             height: 100%;
@@ -45,7 +69,7 @@
 }
 
 .team__content {
-    margin-top: 16px;
+    margin-top: rem(16px);
     display: flex;
     justify-content: flex-start;
     height: 0;
@@ -53,18 +77,19 @@
 }
 
 .team__pic {
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .team__desc {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-left: 20px;
+    padding-left: rem(20px);
 }
 
 .team__subtitle {
@@ -73,13 +98,13 @@
 }
 
 .team__text {
-    margin-top: 22px;
+    margin-top: rem(22px);
     font-family: 'ubuntu';
     font-weight: 300;
 }
 
 .team__name, .team__subtitle, .team__text { 
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
     font-style: normal;
 }

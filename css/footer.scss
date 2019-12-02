@@ -10,23 +10,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: rem(20px) 0;
 }
 
 .footer__address {
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
-    margin-bottom: 14px;
+    margin-bottom: rem(14px);
 }
 
 .footer__phone {
     font-family: 'ubuntu';
     font-weight: 700;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $orange;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .footer__item {
-    margin-left: 20px;
+    margin-left: rem(20px);
 
     &:first-child {
         margin-left: 0;
@@ -45,5 +45,5 @@
 }
 
 .footer__img {
-    width: 20px; height: 20px;
+    width: rem(20px); height: rem(20px);
 }

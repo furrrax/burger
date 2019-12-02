@@ -17,16 +17,28 @@
 .banner {
     display: flex;
     justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .banner__img {
-    width: 451px;
-    height: 424px;
+    width: rem(451px);
+    height: rem(424px);
 }
 
 .banner__description {
-    padding-left: 28px;
-    padding-top: 137px;
+    padding-left: rem(28px);
+    padding-top: rem(137px);
+
+    @include tablets {
+        padding: 0;
+        text-align: center;
+        margin-top: rem(42px);
+        max-width: rem(600px);
+    }
 }
 
 .banner__title {
@@ -37,23 +49,23 @@
     font-family: 'lifehack';
     font-weight: 500;
     font-style: normal;
-    font-size: 65px;
+    font-size: rem(65px);
     color: $white;
     display: inline-block;
-    margin-top: 19px;
-    line-height: 61px;
-    letter-spacing: -2px;
+    margin-top: rem(19px);
+    line-height: rem(61px);
+    letter-spacing: rem(-2px);
 }
 
 .welcome__arrow {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 40px;
+    bottom: rem(40px);
 }
 
 .welcome__arrow-link {
     fill: $white;
-    width: 29px;
-    height: 14px;
+    width: rem(29px);
+    height: rem(14px);
 }

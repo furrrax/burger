@@ -14,9 +14,9 @@
 }
 
 .delivery__title {
-    font-size: 72px;
+    font-size: rem(72px);
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: rem(45px);
 }
 
 .delivery__content {
@@ -36,7 +36,7 @@
 .delivery__row {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: rem(20px);
 
     &:first-child {
         margin-top: 0;
@@ -61,13 +61,13 @@
 
 .delivery__input {
     width: 100%;
-    padding: 10px 20px;
-    border: 1px solid #d1cfcb;
-    border-radius: 5px;
-    margin-top: 10px;
+    padding: rem(10px) rem(20px);
+    border: rem(1px) solid #d1cfcb;
+    border-radius: rem(5px);
+    margin-top: rem(10px);
 
     &:focus {
-        border: 1px solid $yellow;
+        border: rem(1px) solid $yellow;
     }
 }
 
@@ -75,13 +75,13 @@
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }
 
 .delivery__textarea {
-    height: 110px;
+    height: rem(110px);
     resize: none;
 }
 
@@ -89,12 +89,12 @@
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
 }
 
 .delivery__radio-text {
-    margin-left: 10px;
+    margin-left: rem(10px);
 }
 
 .delivery__input {
@@ -102,7 +102,7 @@
 }
 
 .delivery__radio-label {
-    margin-right: 20px;
+    margin-right: rem(20px);
     display: inline-flex;
     align-items: center;
 
@@ -117,8 +117,8 @@
 
 .delivery__radio-fake {
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     background-color: $white;
     border-radius: 50%;
     position: relative;
@@ -127,8 +127,8 @@
 .delivery__radio-fake:after {
     display: inline-block;
     content: '';
-    height: 0px;
-    width: 0px;
+    height: rem(0px);
+    width: rem(0px);
     position: absolute;
     background-color: $orange;
     top: 50%;
@@ -140,8 +140,8 @@
 .delivery__radio-input:checked {
     
     &+.delivery__radio-fake:after {
-        height: 7px;
-        width: 7px;
+        height: rem(7px);
+        width: rem(7px);
         transition: .3s;
     }
 }
@@ -150,7 +150,7 @@
     display: inline-flex;
     align-items: center;
     .delivery__radio-fake {
-        border-radius: 0px;
+        border-radius: rem(0px);
         }
         .delivery__radio-input {
             &+.delivery__radio-fake {
@@ -164,8 +164,8 @@
             &:after {
             background: url("../img/svg/checkbox.svg") 50% no-repeat transparent;
             background-size: contain;
-            width: 11px;
-            height: 11px;
+            width: rem(11px);
+            height: rem(11px);
             }
         }
     }
@@ -185,7 +185,7 @@
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
-    margin-left: 20px;
+    margin-left: rem(20px);
 }

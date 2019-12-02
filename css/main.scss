@@ -3,8 +3,22 @@ $white: #fff;
 $black: #2f3234;
 $yellow: #f9b43b;
 
+// resolutions
+$phones: 480px;
+$tablets: 768px;
+$desktop: 1200px;
+
+html {
+    font-size: 16px;
+}
+
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
 @import "normalize.scss";
 @import "fonts.scss";
+@import "media.scss";
 @import "base.scss";
 @import "header.scss";
 @import "welcome.scss";

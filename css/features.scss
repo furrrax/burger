@@ -18,35 +18,73 @@
 }
 
 .features__content {
-    margin-top: 40px;
+    margin-top: rem(40px);
     display: flex;
     justify-content: space-between;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .features__item {
-    width: calc((100% - 45px) / 3);
+    width: calc((100% - 2%) / 3);
+
+    @include phones {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .features__pic {
     margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.features__pic--meat {
+    width: rem(97px);
+    height: rem(89px);
+}
+
+.features__pic--hand {
+    width: rem(73px);
+    height: rem(85px);
+}
+
+.features__pic--natural {
+    width: rem(88px);
+    height: rem(75px);
+}
+
+.features__text {
+    @include phones {
+        max-width: rem(330px);
+        text-align: left;
+    }
 }
 
 .features__item-title {
-    margin-top: 32px;
+    margin-top: rem(32px);
     font-family: 'lifehack';
     font-weight: 500;
     font-style: normal;
-    font-size: 24px;
+    font-size: rem(24px);
     color: $black;
 }
 
 .features__item-desc {
-    margin-top: 25px;
+    margin-top: rem(25px);
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: #6a6a6a;
     word-wrap: break-word;
     line-height: 150%;
+
+    @include phones {
+        font-size: rem(16px);
+    }
 }

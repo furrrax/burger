@@ -8,8 +8,8 @@
 
 .menu__title {
     position: absolute;
-    top: 110px;
-    left: 95px;
+    top: rem(110px);
+    left: rem(95px);
     color: $white;
 }
 
@@ -29,7 +29,7 @@
             width: 100%;
             overflow: visible;
             background-color: rgba(49, 52, 54, .9);
-            padding: 60px 35px;
+            padding: rem(60px) rem(35px);
             line-height: 1.5;
         }
     }
@@ -37,7 +37,7 @@
 
 .menu__pic {
     height: 100%;
-    width: 80px;
+    width: rem(80px);
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -60,11 +60,11 @@
 }
 
 .menu__subtitle {
-    font-size: 40px;
+    font-size: rem(40px);
     color: $white;
     writing-mode: tb-rl;
     transform:rotate(180deg);
-    padding-top: 40px;
+    padding-top: rem(40px);
 }
 
 .menu__desc {
@@ -73,6 +73,6 @@
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
 }
