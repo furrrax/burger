@@ -7,8 +7,9 @@
 }
 
 .menu__title {
-    margin-top: 110px;
-    margin-left: 95px;
+    position: absolute;
+    top: 110px;
+    left: 95px;
     color: $white;
 }
 
@@ -22,11 +23,14 @@
 }
 
 .menu__item {
+    display: flex;
     &--active {
         .menu__desc {
             width: 100%;
             overflow: visible;
             background-color: rgba(49, 52, 54, .9);
+            padding: 60px 35px;
+            line-height: 1.5;
         }
     }
 }

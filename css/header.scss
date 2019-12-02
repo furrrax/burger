@@ -1,8 +1,14 @@
 /* HEADER */
 
+.header__container {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
 .header__wrapper {
     padding-top: 10px;
-    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
