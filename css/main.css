@@ -601,6 +601,10 @@ section {
   flex-basis: 25%;
   height: 50%;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .reviews__item {
+      flex-basis: 50%;
+      height: 25%; } }
 
 .reviews__photo {
   width: 100%;
@@ -624,6 +628,13 @@ section {
   .reviews__hover:hover {
     opacity: 1;
     transition: .5s; }
+  @media screen and (max-width: 768px) {
+    .reviews__hover {
+      text-align: center;
+      padding: 2.1875rem 3.125rem; } }
+  @media screen and (max-width: 480px) {
+    .reviews__hover {
+      padding: 2.8125rem 3.75rem; } }
 
 .reviews__title {
   font-family: 'gagalin';
@@ -631,6 +642,9 @@ section {
   font-style: normal;
   font-size: 0.875rem;
   color: #fff; }
+  @media screen and (max-width: 480px) {
+    .reviews__title {
+      font-size: 1.5rem; } }
 
 .reviews__desc {
   font-family: 'ubuntu';
@@ -639,10 +653,16 @@ section {
   font-size: 0.875rem;
   color: #fff;
   line-height: 1.5rem; }
+  @media screen and (max-width: 480px) {
+    .reviews__desc {
+      display: none; } }
 
 .reviews__button-link {
   display: inline-block;
   background-color: #2f3234; }
+  @media screen and (max-width: 480px) {
+    .reviews__button-link {
+      font-size: 1rem; } }
 
 .delivery {
   background: url("../img/delivery/delivery-bg.jpg") center center no-repeat;
@@ -656,6 +676,9 @@ section {
 .delivery__container {
   display: flex;
   flex-direction: column; }
+  @media screen and (max-width: 480px) {
+    .delivery__container {
+      max-width: 100%; } }
 
 .delivery__title {
   font-size: 4.5rem;
@@ -665,12 +688,26 @@ section {
 .delivery__content {
   display: flex;
   justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .delivery__content {
+      flex-direction: column;
+      align-items: center; } }
 
 .delivery__col {
   width: 45%;
   margin-left: 5%; }
   .delivery__col:first-child {
     margin-left: 0; }
+  @media screen and (max-width: 768px) {
+    .delivery__col {
+      width: 70%;
+      margin-left: 0;
+      margin-top: 1.25rem; }
+      .delivery__col:first-child {
+        margin-top: 0; } }
+  @media screen and (max-width: 480px) {
+    .delivery__col {
+      width: 100%; } }
 
 .delivery__row {
   display: flex;
@@ -678,6 +715,9 @@ section {
   margin-top: 1.25rem; }
   .delivery__row:first-child {
     margin-top: 0; }
+  @media screen and (max-width: 480px) {
+    .delivery__row--radio, .delivery__row--checkbox, .delivery__row--submit {
+      margin-top: 2.5rem; } }
 
 .delivery__row-double .delivery__label {
   width: calc(100% / 2 - 20px); }
@@ -786,6 +826,10 @@ section {
   color: #fff;
   margin-left: 1.25rem; }
 
+@media screen and (max-width: 480px) {
+  .delivery__row--radio, .delivery__row--checkbox, .delivery__row--submit {
+    justify-content: center; } }
+
 .team {
   background: url("../img/team/team-bg.jpg") center center no-repeat;
   background-size: cover;
@@ -805,12 +849,21 @@ section {
     .team__container {
       width: 100%; } }
 
+@media screen and (max-width: 768px) {
+  .team__wrapper {
+    text-align: center; } }
+
 .team__accordeon {
-  margin-top: 3.4375rem; }
+  margin-top: 3.4375rem;
+  text-align: left; }
+  @media screen and (max-width: 768px) {
+    .team__accordeon {
+      text-align: center; } }
 
 .team__name {
   font-family: 'gagalin';
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 0.875rem; }
   .team__name:before {
     content: '';
     border: 8px solid transparent;
@@ -824,10 +877,7 @@ section {
     display: inline-block; }
 
 .team__item {
-  margin-bottom: 2.5rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start; */ }
+  margin-bottom: 2.5rem; }
   .team__item:last-child {
     margin-bottom: 0; }
   .team__item--active .team__name {
@@ -839,6 +889,9 @@ section {
       border-top-width: 0; }
   .team__item--active .team__content {
     height: 100%; }
+  @media screen and (max-width: 768px) {
+    .team__item {
+      margin-bottom: 2.1875rem; } }
 
 .team__content {
   margin-top: 1rem;
@@ -846,6 +899,10 @@ section {
   justify-content: flex-start;
   height: 0;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .team__content {
+      flex-direction: column;
+      align-items: center; } }
 
 .team__pic {
   width: 6.25rem;
@@ -860,6 +917,11 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   padding-left: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .team__desc {
+      padding-left: 0;
+      margin-top: 1.25rem;
+      max-width: 21.875rem; } }
 
 .team__subtitle {
   font-family: 'ubuntu';
@@ -869,11 +931,18 @@ section {
   margin-top: 1.375rem;
   font-family: 'ubuntu';
   font-weight: 300; }
+  @media screen and (max-width: 768px) {
+    .team__text {
+      line-height: 170%; } }
 
 .team__name, .team__subtitle, .team__text {
   font-size: 0.875rem;
   color: #fff;
   font-style: normal; }
+
+@media screen and (max-width: 768px) {
+  .team__name {
+    font-size: 1.5rem; } }
 
 .menu {
   background: url("/img/menu/menu-bg.jpg") center center no-repeat;
@@ -894,7 +963,15 @@ section {
   right: 0;
   bottom: 0;
   display: flex;
-  max-width: 45%; }
+  max-width: 50%; }
+  @media screen and (max-width: 768px) {
+    .menu__accordeon {
+      max-width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .menu__accordeon {
+      max-width: 100%; }
+      .menu__accordeon .menu__pic--veg, .menu__accordeon .menu__pic--diet {
+        display: none; } }
 
 .menu__item {
   display: flex; }
@@ -939,6 +1016,10 @@ section {
   font-style: normal;
   font-size: 0.875rem;
   color: #fff; }
+  @media screen and (max-width: 480px) {
+    .menu__desc {
+      font-size: 1rem;
+      line-height: 200%; } }
 
 .map {
   background: url("../img/map/map-bg.jpg") center center no-repeat;
@@ -952,13 +1033,22 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #111111; }
+  background: url("../img/footer/footer-bg.jpg");
+  padding: 0.625rem 0;
+  display: flex;
+  align-items: center; }
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 0; }
+  justify-content: space-between; }
+  @media screen and (max-width: 480px) {
+    .footer__container {
+      flex-direction: column;
+      align-items: center; } }
+
+@media screen and (max-width: 480px) {
+  .footer__contacts {
+    text-align: center; } }
 
 .footer__address {
   font-family: 'ubuntu';
@@ -966,7 +1056,10 @@ section {
   font-style: normal;
   font-size: 0.875rem;
   color: #fff;
-  margin-bottom: 0.875rem; }
+  margin-bottom: 0.125rem; }
+  @media screen and (max-width: 480px) {
+    .footer__address {
+      margin-bottom: 0.625rem; } }
 
 .footer__phone {
   font-family: 'ubuntu';
@@ -979,6 +1072,9 @@ section {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .footer__socials {
+      margin-top: 0.875rem; } }
 
 .footer__item {
   margin-left: 1.25rem; }

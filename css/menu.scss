@@ -19,7 +19,22 @@
     right: 0;
     bottom: 0;
     display: flex;
-    max-width: 45%;
+    max-width: 50%;
+
+    @include tablets {
+        @if menu__item--active {
+            max-width: 100%;
+        }
+    }
+
+    @include phones {
+        @if menu__item--active {
+            max-width: 100%;
+            .menu__pic--veg, .menu__pic--diet {
+                display: none;
+            }
+        }
+    }
 }
 
 .menu__item {
@@ -75,4 +90,9 @@
     font-style: normal;
     font-size: rem(14px);
     color: $white;
+
+    @include phones {
+        font-size: rem(16px);
+        line-height: 200%;
+    }
 }

@@ -14,6 +14,11 @@
     flex-basis: 25%;
     height: 50%;
     position: relative;
+
+    @include tablets {
+        flex-basis: 50%;
+        height: 25%;
+    }
 }
 
 .reviews__photo {
@@ -41,6 +46,15 @@
         opacity: 1;
         transition: .5s;
     }
+
+    @include tablets {
+        text-align: center;
+        padding: rem(35px) rem(50px);
+    }
+
+    @include phones {
+        padding: rem(45px) rem(60px);
+    }
 }
 
 .reviews__title {
@@ -49,6 +63,10 @@
     font-style: normal;
     font-size: rem(14px);
     color: $white;
+
+    @include phones {
+        font-size: rem(24px);
+    }
 }
 
 .reviews__desc {
@@ -59,9 +77,17 @@
     font-size: rem(14px);
     color: $white;
     line-height: rem(24px);
+
+    @include phones {
+        display: none;
+    }
 }
 
 .reviews__button-link {
     display: inline-block;
     background-color: #2f3234;
+
+    @include phones {
+        font-size: rem(16px);
+    }
 }
