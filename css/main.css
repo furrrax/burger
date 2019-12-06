@@ -354,7 +354,8 @@ body {
 .wrapper {
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 ul, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -425,11 +426,11 @@ section {
     .header__nav {
       display: none; } }
 
-.header__nav-list {
+.nav-list {
   display: flex;
   justify-content: center; }
 
-.header__nav-item:before {
+.nav-item:before {
   content: '';
   display: inline-block;
   height: 0.25rem;
@@ -439,10 +440,10 @@ section {
   vertical-align: middle;
   margin-right: 0.5625rem;
   margin-left: 0.5625rem; }
-.header__nav-item:first-child:before {
+.nav-item:first-child:before {
   display: none; }
 
-.header__nav-link {
+.nav-link {
   font-family: 'ubuntu';
   font-weight: 500;
   font-style: normal;
@@ -1089,6 +1090,59 @@ section {
 .footer__socials-img {
   width: 1.25rem;
   height: 1.25rem; }
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2f3234;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50; }
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: flex; } }
+
+.hamburger__logo {
+  position: absolute;
+  top: 0.625rem;
+  left: 1.5625rem; }
+
+.hamburger__img {
+  width: 6rem;
+  height: 4.3125rem; }
+
+.hamburger__nav .nav-list {
+  flex-direction: column;
+  text-align: center; }
+
+.hamburger__link {
+  vertical-align: middle;
+  position: relative;
+  height: 1.375rem;
+  align-items: center;
+  margin-left: 1.875rem;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .hamburger__link {
+      display: inline-flex; } }
+
+.hamburger__link-item, .hamburger__link-item:before, .hamburger__link-item:after {
+  background: #fff;
+  width: 1.5rem;
+  height: 0.3125rem;
+  border-radius: 0.1875rem; }
+.hamburger__link-item:before, .hamburger__link-item:after {
+  content: "";
+  display: block;
+  position: absolute; }
+.hamburger__link-item:before {
+  top: 0; }
+.hamburger__link-item:after {
+  bottom: 0; }
 
 /* PAGINATION */
 .pagination {

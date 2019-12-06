@@ -30,12 +30,12 @@
     }
 }
 
-.header__nav-list {
+.nav-list {
     display: flex;
     justify-content: center;
 }
 
-.header__nav-item {
+.nav-item {
     &:before {
     content: '';
     display: inline-block;
@@ -52,7 +52,7 @@
     }
 }
 
-.header__nav-link {
+.nav-link {
     font-family: 'ubuntu';
     font-weight: 500;
     font-style: normal;
