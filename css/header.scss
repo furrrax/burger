@@ -64,4 +64,11 @@
 
 .header__order {
     margin-left: rem(15px);
+
+    @include tablets {
+        margin-left: auto;
+    }
+    @include phones {
+        margin-left: auto;
+    }
 }

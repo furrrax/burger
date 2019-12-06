@@ -8,10 +8,8 @@
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 50;
-    @include tablets {
-        display: flex;
-    }
+    z-index: 100;
+	transition: 0.6s;
 }
 
 .hamburger__logo {
@@ -25,45 +23,128 @@
     height: rem(69px);
 }
 
+.hamburger__items {
+	display: flex;
+
+}
+
 .hamburger__nav {
     .nav-list {
         flex-direction: column;
         text-align: center;
-    }
+	}
+}
+
+.hamburger__nav {
+	@include tablets {
+		.nav-item {
+			position: relative;
+			margin-bottom: rem(50px);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				position: absolute;
+				bottom: rem(47px);
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin: 0;
+			}
+			&:nth-child(6) {
+				display: none;
+			}
+		}
+		.nav-link {
+			font-size: rem(24px);
+			font-weight: 400;
+		}
+	}
+}
+
+.hamburger__close {
+	position: absolute;
+	top: rem(30px);
+	right: rem(30px);
+	transform: rotate(45deg);
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: rem(20px);
+		height: rem(20px);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@include phones {
+		right: rem(63px);
+	}
+}
+
+.hamburger__cross {
+	width: rem(5px);
+	height: rem(25px);
+	background: #c1c2c2;
+	border-radius: rem(5px);
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: rem(25px);
+		height: rem(5px);
+		background: #c1c2c2;
+		border-radius: rem(5px);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
 
 .hamburger__link {
-	vertical-align: middle;
-	position: relative;
-	height: rem(22px);
-	align-items: center;
-	margin-left: rem(30px);
 	display: none;
+	margin-left: rem(30px);
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		width: rem(24px);
+		height: rem(24px);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 
 	@include tablets {
-		display: inline-flex;
+		display: inline-block;
+	}
+	@include phones {
+		display: inline-block;
 	}
 }
 
 .hamburger__link-item {
-	&, &:before, &:after {
-		background: #fff;
-		width: rem(24px);
-		height: rem(5px);
-		border-radius: rem(3px);
-	}
+	width: rem(24px);
+	height: rem(4px);
+	background: $white;
+	position: relative;
+	border-radius: rem(5px);
 
 	&:before, &:after {
-		content: "";
+		content: '';
 		display: block;
 		position: absolute;
+		width: rem(24px);
+		height: rem(4px);
+		background: $white;
+		border-radius: rem(5px);
 	}
-
 	&:before {
-		top: 0;
+		bottom: 100%;
+		margin-bottom: rem(5px);
 	}
-
 	&:after {
-		bottom: 0;
+		top: 100%;
+		margin-top: rem(5px);
 	}
 }
