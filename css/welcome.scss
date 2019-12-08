@@ -7,6 +7,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .welcome__container {
@@ -64,7 +65,7 @@
     bottom: rem(40px);
 }
 
-.welcome__arrow-link {
+.arrow {
     fill: $white;
     width: rem(29px);
     height: rem(14px);
