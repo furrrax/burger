@@ -404,7 +404,8 @@ section {
 .header__container {
   position: absolute;
   right: 0;
-  left: 0; }
+  left: 0;
+  z-index: 30; }
 
 .header__wrapper {
   padding-top: 0.625rem;
