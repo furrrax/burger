@@ -9,6 +9,14 @@
     position: relative;
     display: flex;
     align-items: center;
+
+    @include tablets {
+        max-width: rem(650px);
+    }
+
+    @include phones {
+        max-width: rem(480px);
+    }
 }
 
 .slider__prev {
@@ -34,10 +42,34 @@
 .slider__content {
     display: flex;
     justify-content: center;
+
+    @include break960 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .slider__img, .slider__desc {
     flex-basis: 50%;
+}
+
+.slider__img {
+    @include break960 {
+        position: relative;
+    }
+    @include tablets {
+        position: relative;
+    }
+}
+
+.slider__main-img {
+    width: 100%;
 }
 
 .slider__pic {
@@ -72,7 +104,19 @@
             position: relative;
         }
         .slider__pic-text {
-            opacity: 50%;
+            opacity: .5;
+        }
+
+        @include break960 {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        @include tablets {
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
 
@@ -86,7 +130,7 @@
 .slider__pic--kkal {
     width: rem(60px);
     height: rem(60px);
-    opacity: 50%;
+    opacity: .5;
     margin-bottom: rem(5px);
 }
 
@@ -110,12 +154,30 @@
     flex-direction: column;
     justify-content: center;
     margin-left: rem(20px);
+
+    @include break960 {
+        margin-left: 0;
+        margin-top: rem(20px);
+        align-items: center;
+        text-align: center;
+    }
+
+    @include tablets {
+        margin-left: 0;
+        margin-top: rem(20px);
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .slider__title {
     color: $white;
     padding-bottom: rem(55px);
     line-height: 90%;
+
+    @include tablets {
+        max-width: rem(350px);
+    }
 }
 
 .slider__desc-text {
@@ -126,6 +188,10 @@
     font-size: rem(14px);
     letter-spacing: rem(1px);
     line-height: 170%;
+
+    /* @include tablets {
+        max-width: rem(570px);
+    } */
 }
 
 .slider__order {
@@ -149,8 +215,4 @@
         font-size: rem(30px);
         margin-right: rem(30px);
     }
-}
-
-.slider__button {
-    display: inline-flex;
 }

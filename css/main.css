@@ -336,6 +336,9 @@ template {
   src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 0.9375rem; } }
 @media screen and (max-width: 768px) {
   html {
     font-size: 0.875rem; } }
@@ -441,6 +444,10 @@ section {
   vertical-align: middle;
   margin-right: 0.5625rem;
   margin-left: 0.5625rem; }
+  @media screen and (max-width: 960px) {
+    .nav-item:before {
+      margin-right: 0.125rem;
+      margin-left: 0.125rem; } }
 .nav-item:first-child:before {
   display: none; }
 
@@ -452,6 +459,9 @@ section {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.0625rem; }
+  @media screen and (max-width: 960px) {
+    .nav-link {
+      font-size: 0.75rem; } }
 
 .header__order {
   margin-left: 0.9375rem; }
@@ -555,9 +565,11 @@ section {
       align-items: center; } }
 
 .features__pic {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
+  @media screen and (max-width: 480px) {
+    .features__pic {
+      margin: 0 auto;
+      width: 20%; } }
 
 .features__pic--meat {
   width: 6.0625rem;
@@ -573,8 +585,11 @@ section {
 
 @media screen and (max-width: 480px) {
   .features__text {
-    max-width: 20.625rem;
+    max-width: 70%;
     text-align: left; } }
+@media screen and (max-width: 340px) {
+  .features__text {
+    margin-left: 0.9375rem; } }
 
 .features__item-title {
   margin-top: 2rem;
@@ -607,6 +622,12 @@ section {
   position: relative;
   display: flex;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .slider__container {
+      max-width: 40.625rem; } }
+  @media screen and (max-width: 480px) {
+    .slider__container {
+      max-width: 30rem; } }
 
 .slider__prev {
   position: absolute;
@@ -623,9 +644,28 @@ section {
 .slider__content {
   display: flex;
   justify-content: center; }
+  @media screen and (max-width: 960px) {
+    .slider__content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; } }
+  @media screen and (max-width: 768px) {
+    .slider__content {
+      flex-direction: column;
+      align-items: center; } }
 
 .slider__img, .slider__desc {
   flex-basis: 50%; }
+
+@media screen and (max-width: 960px) {
+  .slider__img {
+    position: relative; } }
+@media screen and (max-width: 768px) {
+  .slider__img {
+    position: relative; } }
+
+.slider__main-img {
+  width: 100%; }
 
 .slider__pic-up {
   height: 5.625rem;
@@ -649,7 +689,17 @@ section {
     flex-direction: column;
     position: relative; }
   .slider__pic-bottom .slider__pic-text {
-    opacity: 50%; }
+    opacity: .5; }
+  @media screen and (max-width: 960px) {
+    .slider__pic-bottom {
+      position: absolute;
+      right: 0;
+      top: 0; } }
+  @media screen and (max-width: 768px) {
+    .slider__pic-bottom {
+      position: absolute;
+      right: 0;
+      top: 0; } }
 
 .slider__pic--burger {
   width: 2.875rem;
@@ -658,7 +708,7 @@ section {
 .slider__pic--kkal {
   width: 3.75rem;
   height: 3.75rem;
-  opacity: 50%;
+  opacity: .5;
   margin-bottom: 0.3125rem; }
 
 .slider__pic-text {
@@ -678,11 +728,26 @@ section {
   flex-direction: column;
   justify-content: center;
   margin-left: 1.25rem; }
+  @media screen and (max-width: 960px) {
+    .slider__desc {
+      margin-left: 0;
+      margin-top: 1.25rem;
+      align-items: center;
+      text-align: center; } }
+  @media screen and (max-width: 768px) {
+    .slider__desc {
+      margin-left: 0;
+      margin-top: 1.25rem;
+      align-items: center;
+      text-align: center; } }
 
 .slider__title {
   color: #fff;
   padding-bottom: 3.4375rem;
   line-height: 90%; }
+  @media screen and (max-width: 768px) {
+    .slider__title {
+      max-width: 21.875rem; } }
 
 .slider__desc-text {
   font-family: 'ubuntu';
@@ -691,7 +756,10 @@ section {
   color: #fff;
   font-size: 0.875rem;
   letter-spacing: 0.0625rem;
-  line-height: 170%; }
+  line-height: 170%;
+  /* @include tablets {
+      max-width: rem(570px);
+  } */ }
 
 .slider__order {
   display: flex;
@@ -710,9 +778,6 @@ section {
   .slider__order .slider__cur {
     font-size: 1.875rem;
     margin-right: 1.875rem; }
-
-.slider__button {
-  display: inline-flex; }
 
 /* REVIEWS */
 .reviews {
@@ -974,14 +1039,27 @@ section {
   @media screen and (max-width: 768px) {
     .team__container {
       width: 100%; } }
+  @media screen and (max-width: 960px) {
+    .team__container {
+      width: 100%; } }
 
+@media screen and (max-width: 960px) {
+  .team__wrapper {
+    text-align: center; } }
 @media screen and (max-width: 768px) {
   .team__wrapper {
     text-align: center; } }
 
+@media screen and (max-width: 340px) {
+  .team__title {
+    font-size: 2.5rem; } }
+
 .team__accordeon {
   margin-top: 3.4375rem;
   text-align: left; }
+  @media screen and (max-width: 960px) {
+    .team__accordeon {
+      text-align: center; } }
   @media screen and (max-width: 768px) {
     .team__accordeon {
       text-align: center; } }
@@ -1015,6 +1093,9 @@ section {
       border-top-width: 0; }
   .team__item--active .team__content {
     height: 100%; }
+  @media screen and (max-width: 960px) {
+    .team__item {
+      margin-bottom: 2.1875rem; } }
   @media screen and (max-width: 768px) {
     .team__item {
       margin-bottom: 2.1875rem; } }
@@ -1025,6 +1106,10 @@ section {
   justify-content: flex-start;
   height: 0;
   overflow: hidden; }
+  @media screen and (max-width: 960px) {
+    .team__content {
+      flex-direction: column;
+      align-items: center; } }
   @media screen and (max-width: 768px) {
     .team__content {
       flex-direction: column;
@@ -1043,6 +1128,10 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   padding-left: 1.25rem; }
+  @media screen and (max-width: 960px) {
+    .team__desc {
+      padding-left: 0;
+      margin-top: 1.25rem; } }
   @media screen and (max-width: 768px) {
     .team__desc {
       padding-left: 0;
@@ -1090,6 +1179,9 @@ section {
   bottom: 0;
   display: flex;
   max-width: 50%; }
+  @media screen and (max-width: 960px) {
+    .menu__accordeon {
+      max-width: 100%; } }
   @media screen and (max-width: 768px) {
     .menu__accordeon {
       max-width: 100%; } }
@@ -1109,11 +1201,11 @@ section {
     line-height: 1.5; }
 
 .menu__pic {
-  height: 100%;
+  /* height: 100%; */
   width: 5rem;
   display: flex;
   justify-content: center;
-  align-items: flex-end; }
+  /* align-items: flex-end; */ }
   .menu__pic--meat {
     background: url("/img/menu/for-meat-eater.jpg");
     background-size: cover;

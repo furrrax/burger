@@ -47,7 +47,13 @@
     vertical-align: middle;
     margin-right: rem(9px);
     margin-left: rem(9px);
+
+    @include break960{
+        margin-right: rem(2px);
+        margin-left: rem(2px);
     }
+    }
+
     &:first-child:before {
         display: none;
     }
@@ -61,6 +67,10 @@
     color: $white;
     text-transform: uppercase;
     letter-spacing: rem(1px);
+
+    @include break960 {
+        font-size: rem(12px);
+    }
 }
 
 .header__order {

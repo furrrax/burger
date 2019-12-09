@@ -21,6 +21,12 @@
     display: flex;
     max-width: 50%;
 
+    @include break960 {
+        @if menu__item--active {
+            max-width: 100%;
+        }
+    }
+
     @include tablets {
         @if menu__item--active {
             max-width: 100%;
@@ -51,11 +57,11 @@
 }
 
 .menu__pic {
-    height: 100%;
+    /* height: 100%; */
     width: rem(80px);
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    /* align-items: flex-end; */
 
     &--meat {
         background: url('/img/menu/for-meat-eater.jpg');
