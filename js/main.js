@@ -16,17 +16,18 @@ hamburgerClose.addEventListener('click', function() {
 const menuAccord = document.querySelector('.menu__accordeon');
 const menuItem = document.querySelector('.menu__item');
 const menuTrigger = document.querySelector('.menu__item--active');
+const menuPic = document.querySelector('.menu__pic');
 
-menuAccord.addEventListener('click', function(event) {
+/* menuAccord.addEventListener('click', function(event) {
     event.preventDefault();
-    const target = event.target;
-    if (target.classList.contains('menuItem')) {
-        target.classList.add('menuTrigger');
+    const menuTarget = event.target;
+    if (menuTarget.classList.contains('.menu__item')) {
+        menuTarget.parentNode.classList.add('.menu__item--active');
     }
-})
+}) */
 
-/* menuItem.addEventListener('click', function (event) {
+menuItem.addEventListener('click', function (event) {
     event.preventDefault();
     const menuTarget = event.target;
     menuTarget.parentNode.classList.add('.menu__item--active');
-}) */
+})
