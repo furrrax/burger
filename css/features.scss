@@ -65,9 +65,6 @@
         max-width: 70%;
         text-align: left;
     }
-    @include bricks {
-        margin-left: rem(15px);
-    }
 }
 
 .features__item-title {

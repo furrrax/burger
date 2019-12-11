@@ -18,16 +18,9 @@
     @include tablets {
         width: 100%;
     }
-
-    @include break960 {
-        width: 100%;
-    }
 }
 
 .team__wrapper {
-    @include break960 {
-        text-align: center;
-    }
 
     @include tablets {
         text-align: center;
@@ -35,7 +28,7 @@
 }
 
 .team__title {
-    @include bricks {
+    @include phones {
         font-size: rem(40px);
     }
 }
@@ -43,10 +36,6 @@
 .team__accordeon {
     margin-top: rem(55px);
     text-align: left;
-
-    @include break960 {
-        text-align: center;
-    }
 
     @include tablets {
         text-align: center;
@@ -95,10 +84,6 @@
         }
     }
 
-    @include break960 {
-        margin-bottom: rem(35px);
-    }
-
     @include tablets {
         margin-bottom: rem(35px);
     }
@@ -110,11 +95,6 @@
     justify-content: flex-start;
     height: 0;
     overflow: hidden;
-
-    @include break960 {
-        flex-direction: column;
-        align-items: center;
-    }
 
     @include tablets {
         flex-direction: column;
@@ -136,11 +116,6 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-left: rem(20px);
-
-    @include break960 {
-        padding-left: 0;
-        margin-top: rem(20px)
-    }
 
     @include tablets {
         padding-left: 0;

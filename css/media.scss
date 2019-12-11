@@ -16,28 +16,7 @@
 	}
 }
 
-@mixin break960 {
-	@media screen and (max-width: $break960) {
-		@content;
-	}
-}
-
-@mixin break640 {
-	@media screen and (max-width: $break640) {
-		@content;
-	}
-}
-
-@mixin bricks {
-	@media screen and (max-width: $bricks) {
-		@content;
-	}
-}
-
 html {
-	@include break960 {
-		font-size: rem(15px);
-	}
     @include tablets {
       font-size: rem(14px);
     }

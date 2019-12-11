@@ -21,12 +21,6 @@
     display: flex;
     max-width: 50%;
 
-    @include break960 {
-        @if menu__item--active {
-            max-width: 100%;
-        }
-    }
-
     @include tablets {
         @if menu__item--active {
             max-width: 100%;
