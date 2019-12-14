@@ -646,6 +646,7 @@ section {
   width: 100%; }
 
 .slider__pic-up {
+  position: relative;
   height: 5.625rem;
   width: 5.625rem;
   border-radius: 0.3125rem;
@@ -673,6 +674,44 @@ section {
       position: absolute;
       right: 0;
       top: 0; } }
+
+.slider__dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 1.25rem 1.25rem;
+  background-color: #fff;
+  opacity: .9;
+  border-radius: 0.3125rem;
+  min-width: 16.875rem;
+  display: none;
+  flex-direction: column; }
+  .slider__dropdown-name {
+    margin-right: auto;
+    margin-left: 1.5625rem;
+    font-family: 'ubuntu';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.875rem;
+    color: #2f3234; }
+  .slider__dropdown-weight {
+    font-family: 'ubuntu';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.875rem;
+    color: #2f3234; }
+
+.slider__dropdown-item {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9375rem; }
+  .slider__dropdown-item:last-child {
+    margin-bottom: 0; }
+
+.slider__dropdown-pic {
+  width: 2.75rem;
+  height: 2.5rem; }
 
 .slider__pic--burger {
   width: 2.875rem;

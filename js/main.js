@@ -11,6 +11,25 @@ hamburgerClose.addEventListener('click', function() {
     hamburgerMenu.style.display = "none";
 })
 
+/* SLIDER DROPDOWN */
+
+const dropdownLink = document.querySelector('.slider__pic-up');
+const sliderDropdown = document.querySelector('.slider__dropdown');
+
+dropdownLink.addEventListener('click', function(e) {
+    e.preventDefault();
+})
+
+dropdownLink.addEventListener('mouseover', function(e) {
+    sliderDropdown.style.display = "flex";
+    dropdownLink.style.backgroundColor = "#e35028";
+})
+
+dropdownLink.addEventListener('mouseout', function(e) {
+    sliderDropdown.style.display = "none";
+    dropdownLink.style.backgroundColor = "#f08c33";
+})
+
 /* MENU */
 
 const menuAccord = document.querySelector('.menu__accordeon');
