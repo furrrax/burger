@@ -110,14 +110,16 @@
 .slider__dropdown {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 9999px;
     padding: rem(20px) rem(20px);
     background-color: $white;
     opacity: .9;
     border-radius: rem(5px);
     min-width: rem(270px);
-    display: none;
+    display: flex;
     flex-direction: column;
+    opacity: 0;
+    transition: opacity .3s;
 
     &-name {
         margin-right: auto;

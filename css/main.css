@@ -678,14 +678,16 @@ section {
 .slider__dropdown {
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 9999px;
   padding: 1.25rem 1.25rem;
   background-color: #fff;
   opacity: .9;
   border-radius: 0.3125rem;
   min-width: 16.875rem;
-  display: none;
-  flex-direction: column; }
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity .3s; }
   .slider__dropdown-name {
     margin-right: auto;
     margin-left: 1.5625rem;
@@ -1170,9 +1172,7 @@ section {
       max-width: 100%; } }
   @media screen and (max-width: 640px) {
     .menu__accordeon {
-      max-width: 100%; }
-      .menu__accordeon .menu__pic--veg, .menu__accordeon .menu__pic--diet {
-        display: none; } }
+      max-width: 100%; } }
 
 .menu__item {
   display: flex; }
@@ -1184,11 +1184,9 @@ section {
     line-height: 1.5; }
 
 .menu__pic {
-  /* height: 100%; */
   width: 5rem;
   display: flex;
-  justify-content: center;
-  /* align-items: flex-end; */ }
+  justify-content: center; }
   .menu__pic--meat {
     background: url("/img/menu/for-meat-eater.jpg");
     background-size: cover;
@@ -1207,7 +1205,12 @@ section {
   color: #fff;
   writing-mode: tb-rl;
   transform: rotate(180deg);
-  padding-top: 2.5rem; }
+  padding-top: 2.5rem;
+  /* white-space: nowrap;
+  top: 95%;
+  left: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0; */ }
 
 .menu__desc {
   width: 0;
