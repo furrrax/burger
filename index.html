@@ -408,35 +408,42 @@
                             <div class="delivery__row delivery__row-double">
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Имя</span>
-                                    <input type="text" class="delivery__input">
+                                    <input type="text" class="delivery__input" name="name" required>
+                                    <div class="error"></div>
                                 </label>
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Телефон</span>
-                                    <input type="text" class="delivery__input" placeholder="89212264923">
+                                    <input type="text" class="delivery__input delivery__phone" placeholder="89212264923" name="phone" required>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                             <div class="delivery__row">
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Улица</span>
-                                    <input type="text" class="delivery__input">
+                                    <input type="text" class="delivery__input" name="street" required>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                             <div class="delivery__row delivery__row-quattro">
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Дом</span>
-                                    <input type="text" class="delivery__input">
+                                    <input type="text" class="delivery__input" name="house" required>
+                                    <div class="error"></div>
                                 </label>
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Корпус</span>
-                                    <input type="text" class="delivery__input">
+                                    <input type="text" class="delivery__input" name="corp" required>
+                                    <div class="error"></div>
                                 </label>
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Квартира</span>
-                                    <input type="text" class="delivery__input">
+                                    <input type="text" class="delivery__input" name="appart" required>
+                                    <div class="error"></div>
                                 </label>
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Этаж</span>
-                                    <input type="text" class="delivery__input">
+                                    <input type="text" class="delivery__input" name="floor" required>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                         </div>
@@ -444,18 +451,19 @@
                             <div class="delivery__row delivery__row-comment">
                                 <label class="delivery__label">
                                     <span class="delivery__subtitle">Комментарий</span>
-                                    <textarea class="delivery__textarea delivery__input"></textarea>
+                                    <textarea class="delivery__textarea delivery__input" name="comment" required></textarea>
+                                    <div class="error"></div>
                                 </label>
                             </div>
                             <div class="delivery__row delivery__row--radio">
                                 <div class="delivery__radio">
                                     <label class="delivery__radio-label">
-                                        <input type="radio" class="delivery__radio-input" name="delivery" checked>
+                                        <input type="radio" class="delivery__radio-input" name="cashback" checked>
                                         <span class="delivery__radio-fake"></span>
                                         <span class="delivery__radio-text">Потребуется сдача</span>
                                     </label>
                                     <label class="delivery__radio-label">
-                                        <input type="radio" class="delivery__radio-input" name="delivery">
+                                        <input type="radio" class="delivery__radio-input" name="card">
                                         <span class="delivery__radio-fake"></span>
                                         <span class="delivery__radio-text">Оплата по карте</span>
                                     </label>
@@ -470,7 +478,7 @@
                             </div>
                             <div class="delivery__row delivery__row--submit">
                                 <input class="delivery__button button" type="submit" value="Заказать">
-                                <input class="delivery__button delivery__button-reset" type="reset" value="Очистить">
+                                <input class="delivery__button-reset" type="reset" value="Очистить">
                             </div>
                         </div>
                     </form>

@@ -6,10 +6,10 @@ var hamburgerMenu = document.querySelector('.hamburger');
 
 hamburgerLink.addEventListener('click', function() {
     hamburgerMenu.style.display = "flex";
-})
+});
 hamburgerClose.addEventListener('click', function() {
     hamburgerMenu.style.display = "none";
-})
+});
 
 /* SLIDER DROPDOWN */
 
@@ -18,19 +18,19 @@ const sliderDropdown = document.querySelector('.slider__dropdown');
 
 dropdownLink.addEventListener('click', function(e) {
     e.preventDefault();
-})
+});
 
 dropdownLink.addEventListener('mouseover', function(e) {
     sliderDropdown.style.left = "100%";
     sliderDropdown.style.opacity = "1";
     dropdownLink.style.backgroundColor = "#e35028";
-})
+});
 
 dropdownLink.addEventListener('mouseout', function(e) {
     sliderDropdown.style.left = "9999px";
     sliderDropdown.style.opacity = "0";
     dropdownLink.style.backgroundColor = "#f08c33";
-})
+});
 
 /* MENU ACCORD */
 
@@ -46,7 +46,7 @@ for (let i = 0; i < accItem.length; i++) {
             }
             this.classList.add ('menu__item--active');
         }
-    })
+    });
 }
 
 menuAcc.addEventListener ('click', function (event) {
@@ -57,7 +57,7 @@ menuAcc.addEventListener ('click', function (event) {
             accItem[i].classList.remove ('menu__item--active');
         }
     }
-})
+});
 
 /* TEAM ACCORD */
 
@@ -73,7 +73,7 @@ for (let i = 0; i < teamItem.length; i++) {
             }
             this.classList.add ('team__item--active');
         }
-    })
+    });
 }
 
 teamSect.addEventListener ('click', function (event) {
@@ -84,4 +84,98 @@ teamSect.addEventListener ('click', function (event) {
             teamItem[i].classList.remove ('team__item--active');
         }
     }
-})
+});
+
+/* ОТПРАВКА ФОРМЫ */
+
+const delPhone = document.querySelector('.delivery__phone');
+
+delPhone.addEventListener('keydown', function(event) {
+    let isDigit = false;
+    let isDash = false;
+    let isControl = false;
+    let isBack = false;
+
+    if (event.key >= 0 || event.key <= 9) {
+        isDigit = true;
+    } 
+    if (event.key == '-') {
+        isDash = true;
+    }
+    if (event.key == 'ArrowLeft' || event.key == 'ArrowRight') {
+        isControl = true;
+    }
+    if (event.key == 'Backspace') {
+        isBack = true;
+    }
+
+    if (!isDigit && !isDash && !isControl && !isBack) {
+        event.preventDefault();
+    }
+});
+
+const delForm = document.querySelector('.delivery__content'),
+    sendBtn = document.querySelector('.delivery__button');
+
+sendBtn.addEventListener('click', event => {
+    event.preventDefault();
+
+        if (validateForm(delForm)) {
+
+            const formData = new FormData();
+
+            formData.append('name', delForm.elements.name.value);
+            formData.append('phone', delForm.elements.phone.value);
+            formData.append('comment', delForm.elements.comment.value);
+            formData.append('to', 'mail@mail.com');
+
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';
+            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+//            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.send(formData);
+            xhr.addEventListener('load', () => {
+                if(xhr.status) {
+                    console.log('OK!');
+                } else {
+                    console.log('Что-то не так!');
+                }
+            });
+        }
+});
+
+function validateForm(form) {
+    let valid = true;
+
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.phone)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.street)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.house)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.corp)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.appart)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.floor)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.comment)) {
+        valid = false;
+    }
+
+    return valid;
+}
+
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+}

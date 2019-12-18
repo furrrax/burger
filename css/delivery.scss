@@ -73,18 +73,19 @@
 
 .delivery__row-double {
     .delivery__label {
-        width: calc(100% / 2 - 20px);
+        width: calc(100% / 2 - 10px);
     }
 }
 
 .delivery__row-quattro {
     .delivery__label {
-        width: calc(100% / 4 - 20px);
+        width: calc(100% / 4 - 10px);
     }
 }
 
 .delivery__label {
     width: 100%;
+    position: relative;
 }
 
 .delivery__input {
@@ -216,10 +217,22 @@
     font-size: rem(14px);
     color: $white;
     margin-left: rem(20px);
+    border: 0;
+    cursor: pointer;
 }
 
 .delivery__row--radio, .delivery__row--checkbox, .delivery__row--submit {
     @include phones {
         justify-content: center;
     }
+}
+
+.error {
+    /* position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $white;
+    padding: rem(10px); */
+    color: $orange;
+    /* display: none; */
 }
