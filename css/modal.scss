@@ -1,0 +1,38 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2f3234;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: .92;
+}
+
+.modal__window {
+    padding: rem(20px) rem(20px);
+    background-color: $white;
+    border-radius: rem(5px);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__text {
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-style: normal;
+    font-size: rem(14px);
+    color: #2f3234;
+}
+
+.modal__close {
+    display: flex;
+    justify-content: center;
+}
+
+.modal__button {
+    margin-top: rem(20px);
+}

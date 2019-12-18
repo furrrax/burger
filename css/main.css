@@ -398,7 +398,8 @@ section {
   font-size: 0.8125rem;
   color: #fff;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
 
 /* HEADER */
 .header__container {
@@ -616,25 +617,39 @@ section {
     .slider__container {
       max-width: 30rem; } }
 
+.slider__list {
+  display: flex;
+  min-width: 100%;
+  align-items: center;
+  position: relative;
+  overflow: hidden; }
+
 .slider__prev {
   position: absolute;
-  left: -2.5rem; }
+  right: 100%;
+  margin-right: 2%; }
   .slider__prev-btn .arrow {
     transform: rotate(90deg); }
 
 .slider__next {
   position: absolute;
-  right: -2.5rem; }
+  left: 100%;
+  margin-left: 2%; }
   .slider__next-btn .arrow {
     transform: rotate(-90deg); }
 
 .slider__content {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  min-width: 100%; }
   @media screen and (max-width: 960px) {
     .slider__content {
       flex-direction: column;
       align-items: center; } }
+
+.slider__img {
+  display: flex;
+  flex-direction: column; }
 
 .slider__img, .slider__desc {
   flex-basis: 50%; }
@@ -769,17 +784,21 @@ section {
       max-width: rem(570px);
   } */ }
 
-.slider__order {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 2.1875rem;
-  align-items: baseline; }
-
+/* .slider__order {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: rem(35px);
+    align-items: baseline;
+} */
 .slider__order {
   font-family: 'gagalin';
   font-weight: 400;
   font-style: normal;
-  color: #e45028; }
+  color: #e45028;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2.1875rem;
+  align-items: baseline; }
   .slider__order .slider__price {
     font-size: 4.5rem;
     margin-right: 0.625rem; }
@@ -1187,7 +1206,7 @@ section {
       max-width: 100%; } }
 
 .menu__item {
-  display: flex; }
+  display: inline-flex; }
   .menu__item--active .menu__desc {
     width: 100%;
     overflow: visible;
@@ -1456,3 +1475,37 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2f3234;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: .92; }
+
+.modal__window {
+  padding: 1.25rem 1.25rem;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  display: flex;
+  flex-direction: column; }
+
+.modal__text {
+  font-family: 'ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.875rem;
+  color: #2f3234; }
+
+.modal__close {
+  display: flex;
+  justify-content: center; }
+
+.modal__button {
+  margin-top: 1.25rem; }

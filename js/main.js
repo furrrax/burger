@@ -123,11 +123,18 @@ sendBtn.addEventListener('click', event => {
         if (validateForm(delForm)) {
 
             const formData = new FormData();
+            const modalMessage = document.querySelector('.modal');
+            const modalBtn = document.querySelector('.modal__button');
+            const modalText = document.querySelector('.modal__text');
 
             formData.append('name', delForm.elements.name.value);
             formData.append('phone', delForm.elements.phone.value);
             formData.append('comment', delForm.elements.comment.value);
             formData.append('to', 'mail@mail.com');
+
+            modalBtn.addEventListener('click', function() {
+                modalMessage.style.display = "none";
+            });
 
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
@@ -136,9 +143,11 @@ sendBtn.addEventListener('click', event => {
             xhr.send(formData);
             xhr.addEventListener('load', () => {
                 if(xhr.status) {
-                    console.log('OK!');
+                    modalMessage.style.display = "flex";
+                    modalText.textContent = 'Сообщение отправлено';
                 } else {
-                    console.log('Что-то не так!');
+                    modalMessage.style.display = "flex";
+                    modalText.textContent = 'Произошла ошибка';
                 }
             });
         }
@@ -179,3 +188,40 @@ function validateField(field) {
     field.nextElementSibling.textContent = field.validationMessage;
     return field.checkValidity();
 }
+
+/* SLIDER */
+
+/* $(function () {
+
+    $('.slider__next-btn').on('click', function(e){
+        e.preventDefault();
+
+        var $this = $(this),
+            container = $this.closest('.slider__container'),
+            items = container.find('.slider__content'),
+            activeSlide = items.filter('.slider__active'),
+            reqItem = activeSlide.next(),
+            reqIndex = reqItem.index(),
+            list = container.find('.slider__list'),
+            duration = 500;
+
+        activeSlide.animate({
+            'transform' : 'translateX(' + -reqIndex*100 + '%)'
+        }, duration);
+
+    });
+}); */
+
+/* $(document).ready(function() {
+
+    $('.slider__next').on('click', function(e) {
+        e.preventDefault();
+    
+        let active = $('.slider__active');
+    
+        active.css({
+            'transform' : 'translateX (-100%)'
+    
+        });
+    });
+}); */
