@@ -212,16 +212,23 @@ function validateField(field) {
     });
 }); */
 
-/* $(document).ready(function() {
+$(document).ready(function() {
 
     $('.slider__next').on('click', function(e) {
         e.preventDefault();
     
         let active = $('.slider__active');
+		let allSlides = $('.slider__content');
+		console.log(allSlides);
+		const computed = window.getComputedStyle(allSlides);
+		console.log(computed);
+		let currentSlide = parseInt(computed.allSlides);
+		console.log(currentSlide);
+		
     
-        active.css({
-            'transform' : 'translateX (-100%)'
+        allSlides.css({
+            'transform' : 'translateX(' + currentSlide + '-' + 100% + '%)'
     
         });
     });
-}); */
+});

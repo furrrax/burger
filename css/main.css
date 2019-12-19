@@ -607,14 +607,17 @@ section {
   display: flex; }
 
 .slider__container {
+  position: relative; }
+
+.slider__wrap {
   position: relative;
   display: flex;
   align-items: center; }
   @media screen and (max-width: 960px) {
-    .slider__container {
+    .slider__wrap {
       max-width: 40.625rem; } }
   @media screen and (max-width: 640px) {
-    .slider__container {
+    .slider__wrap {
       max-width: 30rem; } }
 
 .slider__list {
