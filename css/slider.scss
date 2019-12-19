@@ -7,23 +7,19 @@
 
 .slider__container {
     position: relative;
-}
-
-.slider__wrap {
-    position: relative;
     display: flex;
     align-items: center;
 
     @include tablets {
-        max-width: rem(650px);
+        max-width: rem(960px);
     }
 
     @include phones {
-        max-width: rem(480px);
+        max-width: rem(640px);
     }
 }
 
-.slider__list {
+.slider__wrap {
     display: flex;
     min-width: 100%;
     align-items: center;
@@ -31,10 +27,19 @@
     overflow: hidden;
 }
 
+.slider__list {
+    display: flex;
+    /* min-width: 100%; */
+    align-items: center;
+    /* position: relative; */
+    overflow: hidden;
+}
+
 .slider__prev {
     position: absolute;
     right: 100%;
-    margin-right: 2%;
+    top: 50%;
+    transform-origin: 50% 0;
     &-btn {
         .arrow {
             transform: rotate(90deg);
@@ -45,7 +50,8 @@
 .slider__next {
     position: absolute;
     left: 100%;
-    margin-left: 2%;
+    top: 50%;
+    transform-origin: 50% 0;
     &-btn {
         .arrow {
             transform: rotate(-90deg);
