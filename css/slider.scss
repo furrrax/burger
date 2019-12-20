@@ -11,17 +11,17 @@
     align-items: center;
 
     @include tablets {
-        max-width: rem(960px);
+        max-width: rem(650px);
     }
 
     @include phones {
-        max-width: rem(640px);
+        max-width: rem(480px);
     }
 }
 
 .slider__wrap {
     display: flex;
-    min-width: 100%;
+    /* min-width: 100%; */
     align-items: center;
     position: relative;
     overflow: hidden;

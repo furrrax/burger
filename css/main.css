@@ -612,14 +612,14 @@ section {
   align-items: center; }
   @media screen and (max-width: 960px) {
     .slider__container {
-      max-width: 60rem; } }
+      max-width: 40.625rem; } }
   @media screen and (max-width: 640px) {
     .slider__container {
-      max-width: 40rem; } }
+      max-width: 30rem; } }
 
 .slider__wrap {
   display: flex;
-  min-width: 100%;
+  /* min-width: 100%; */
   align-items: center;
   position: relative;
   overflow: hidden; }
@@ -1374,12 +1374,12 @@ section {
     font-size: 1.5rem;
     font-weight: 400; } }
 
-.hamburger__close {
+.close {
   position: absolute;
   top: 1.875rem;
   right: 1.875rem;
   transform: rotate(45deg); }
-  .hamburger__close:after {
+  .close:after {
     content: '';
     position: absolute;
     width: 1.25rem;
@@ -1388,16 +1388,16 @@ section {
     left: 50%;
     transform: translate(-50%, -50%); }
   @media screen and (max-width: 640px) {
-    .hamburger__close {
+    .close {
       right: 3.9375rem; } }
 
-.hamburger__cross {
+.cross {
   width: 0.3125rem;
   height: 1.5625rem;
   background: #c1c2c2;
   border-radius: 0.3125rem;
   position: relative; }
-  .hamburger__cross:after {
+  .cross:after {
     content: '';
     display: block;
     position: absolute;
@@ -1516,3 +1516,62 @@ section {
 
 .modal__button {
   margin-top: 1.25rem; }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2f3234;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: .92; }
+
+.popup__window {
+  padding: 1.875rem 1.25rem;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 28.75rem;
+  position: relative; }
+
+.popup__title {
+  margin-bottom: 1.5625rem;
+  font-family: 'gagalin';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  text-transform: uppercase; }
+
+.popup__desc {
+  font-family: 'ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 150%; }
+
+.popup__title, .popup__desc {
+  color: #2f3234; }
+
+.popup__close {
+  top: 1.25rem;
+  right: 1.25rem;
+  cursor: pointer; }
+  @media screen and (max-width: 640px) {
+    .popup__close {
+      right: 1.25rem; } }
+
+.popup__cross {
+  width: 0.1875rem;
+  height: 1.125rem;
+  background: #ec8468;
+  border-radius: 0.625rem; }
+  .popup__cross:after {
+    width: 1.125rem;
+    height: 0.1875rem;
+    background: #ec8468;
+    border-radius: 0.625rem; }

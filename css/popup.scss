@@ -1,0 +1,68 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2f3234;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: .92;
+}
+
+.popup__window {
+    padding: rem(30px) rem(20px);
+    background-color: $white;
+    border-radius: rem(5px);
+    display: flex;
+    flex-direction: column;
+    max-width: rem(460px);
+    position: relative;
+}
+
+.popup__title {
+    margin-bottom: rem(25px);
+    font-family: 'gagalin';
+    font-weight: 400;
+    font-style: normal;
+    font-size: rem(14px);
+    text-transform: uppercase;
+}
+
+.popup__desc {
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-style: normal;
+    font-size: rem(14px);
+    line-height: 150%;
+}
+
+.popup__title, .popup__desc {
+    color: #2f3234;
+}
+
+.popup__close {
+    top: rem(20px);
+    right: rem(20px);
+    cursor: pointer;
+
+    @include phones {
+		right: rem(20px);
+	}
+}
+
+.popup__cross {
+    width: rem(3px);
+	height: rem(18px);
+    background: #ec8468;
+    border-radius: rem(10px);
+
+    &:after {
+        width: rem(18px);
+        height: rem(3px);
+        background: #ec8468;
+        border-radius: rem(10px);
+    }
+}
