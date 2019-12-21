@@ -325,44 +325,40 @@ $(document).ready(()  => {
 
 /* SLIDER */
 
-/* $(function () {
+const prev = document.querySelector ('.slider__prev');
+const next = document.querySelector ('.slider__next');
+const sliderList = document.querySelector ('.slider__list');
+const sliderContent = document.querySelectorAll ('.slider__content');
 
-    $('.slider__next-btn').on('click', function(e){
-        e.preventDefault();
+sliderList.style.width = sliderContent.length*100 + '%';
 
-        var $this = $(this),
-            container = $this.closest('.slider__container'),
-            items = container.find('.slider__content'),
-            activeSlide = items.filter('.slider__active'),
-            reqItem = activeSlide.next(),
-            reqIndex = reqItem.index(),
-            list = container.find('.slider__list'),
-            duration = 500;
+const step = 100;
+const minRight = 0;
+const maxRight = step * (sliderContent.length - 1);
+let currentRight = 0;
 
-        activeSlide.animate({
-            'transform' : 'translateX(' + -reqIndex*100 + '%)'
-        }, duration);
+sliderList.style.right = currentRight;
 
-    });
-}); */
+prev.addEventListener('click', e => {
+    e.preventDefault();
 
-/* $(document).ready(function() {
+    if (currentRight > minRight) {
+        currentRight -= step;
+        sliderList.style.right = currentRight + '%';
+    } else {
+        currentRight = maxRight;
+        sliderList.style.right = currentRight + '%';
+    }
+});
 
-    $('.slider__next').on('click', function(e) {
-        e.preventDefault();
-    
-        let active = $('.slider__active');
-		let allSlides = $('.slider__content');
-		console.log(allSlides);
-		const computed = window.getComputedStyle(allSlides);
-		console.log(computed);
-		let currentSlide = parseInt(computed.allSlides);
-		console.log(currentSlide);
-		
-    
-        allSlides.css({
-            'transform' : 'translateX(' + currentSlide + '-' + 100% + '%)'
-    
-        });
-    });
-}); */
+next.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (currentRight < maxRight) {
+        currentRight += step;
+        sliderList.style.right = currentRight + '%';
+    } else {
+        currentRight = minRight;
+        sliderList.style.right = currentRight + '%';
+    }
+});
