@@ -634,6 +634,9 @@ section {
   transform-origin: 50% 0; }
   .slider__prev-btn .arrow {
     transform: rotate(90deg); }
+  @media screen and (max-width: 640px) {
+    .slider__prev {
+      right: 95%; } }
 
 .slider__next {
   position: absolute;
@@ -642,6 +645,9 @@ section {
   transform-origin: 50% 0; }
   .slider__next-btn .arrow {
     transform: rotate(-90deg); }
+  @media screen and (max-width: 640px) {
+    .slider__next {
+      left: 95%; } }
 
 .slider__content {
   height: 100%;
@@ -1268,7 +1274,7 @@ section {
   @media screen and (max-width: 640px) {
     .menu__text {
       font-size: 1rem;
-      line-height: 200%; } }
+      line-height: 100%; } }
 
 .menu__close {
   position: absolute;

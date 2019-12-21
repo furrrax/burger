@@ -41,6 +41,9 @@
             transform: rotate(90deg);
         }
     }
+    @include phones {
+        right: 95%;
+    }
 }
 
 .slider__next {
@@ -52,6 +55,9 @@
         .arrow {
             transform: rotate(-90deg);
         }
+    }
+    @include phones {
+        left: 95%;
     }
 }
 
