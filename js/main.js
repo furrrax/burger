@@ -59,6 +59,24 @@ menuAcc.addEventListener ('click', function (event) {
     }
 });
 
+$(document).ready(() => {
+    let menuClose = $('.menu__close');
+    let menuItem = $('.menu__item');
+
+    menuClose.first().on('click', function() {
+        console.log(menuClose.first());
+        menuItem.first().removeClass('menu__item--active');    
+    });
+    menuClose.last().on('click', function() {
+        console.log(menuClose.last());
+        menuItem.last().removeClass('menu__item--active');    
+    });
+    menuClose.eq(1).on('click', function() {
+        console.log(menuClose.eq(1));
+        menuItem.eq(1).removeClass('menu__item--active');    
+    });
+});
+
 /* TEAM ACCORD */
 
 let teamItem = document.getElementsByClassName ('team__item'),

@@ -61,10 +61,21 @@
 	}
 }
 
-.close {
-	position: absolute;
+.hamburger__close {
 	top: rem(30px);
 	right: rem(30px);
+
+	@include tablets {
+		right: rem(60px);
+	}
+	
+	@include phones {
+		right: rem(17px);
+	}
+}
+
+.close {
+	position: absolute;
 	transform: rotate(45deg);
 
 	&:after {
@@ -76,9 +87,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	@include phones {
-		right: rem(63px);
-	}
+	
 }
 
 .cross {

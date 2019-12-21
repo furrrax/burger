@@ -1219,12 +1219,12 @@ section {
     width: 100%;
     overflow: visible;
     background-color: rgba(49, 52, 54, 0.9);
-    padding: 3.75rem 2.1875rem;
+    padding: 3.125rem 2.1875rem;
     transition: width 0.6s; }
   .menu__item--active .menu__text {
     opacity: 1;
     transition: opacity 0.6s;
-    transition-delay: 0.8s; }
+    transition-delay: 0.3s; }
 
 .menu__pic {
   width: 5rem;
@@ -1253,7 +1253,8 @@ section {
 
 .menu__desc {
   width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .menu__text {
   font-family: 'ubuntu';
@@ -1267,6 +1268,23 @@ section {
     .menu__text {
       font-size: 1rem;
       line-height: 200%; } }
+
+.menu__close {
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.9375rem;
+  cursor: pointer; }
+
+.menu__cross {
+  width: 0.1875rem;
+  height: 1.25rem;
+  background: #ec8468;
+  border-radius: 0.625rem; }
+  .menu__cross:after {
+    width: 1.25rem;
+    height: 0.1875rem;
+    background: #ec8468;
+    border-radius: 0.625rem; }
 
 .map {
   background: url("../img/map/map-bg.jpg") center center no-repeat;
@@ -1384,10 +1402,18 @@ section {
     font-size: 1.5rem;
     font-weight: 400; } }
 
+.hamburger__close {
+  top: 1.875rem;
+  right: 1.875rem; }
+  @media screen and (max-width: 960px) {
+    .hamburger__close {
+      right: 3.75rem; } }
+  @media screen and (max-width: 640px) {
+    .hamburger__close {
+      right: 1.0625rem; } }
+
 .close {
   position: absolute;
-  top: 1.875rem;
-  right: 1.875rem;
   transform: rotate(45deg); }
   .close:after {
     content: '';
@@ -1397,9 +1423,6 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  @media screen and (max-width: 640px) {
-    .close {
-      right: 3.9375rem; } }
 
 .cross {
   width: 0.3125rem;
