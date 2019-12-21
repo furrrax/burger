@@ -34,34 +34,122 @@ dropdownLink.addEventListener('mouseout', function(e) {
 
 /* MENU ACCORD */
 
+
+/* const menuAcc = document.querySelector('.menu');
+const menuList = document.querySelector('.menu__accordeon');
+
+const closeItem = function(item) {
+    item.classList.remove('.menu__item--active');
+}
+
+const closeAllItems = function() {
+    const menuItems = document.querySelectorAll('.menu__item');
+
+    menuItems.forEach(item => {
+        item.classList.remove('.menu__item--active');
+    })
+}
+
+const openItem = function(item) {
+    const trigger = item.querySelector('.menu__pic');
+    const content = item.querySelector('.menu__desc');
+
+    const screenWidth = menuAcc.clientWidth;
+    const triggerWidth = trigger.clientWidth;
+    const contentWidth = screenWidth - triggerWidth;
+
+    const itemNum = item.dataset.item;
+    const listPosition = (menuItems.length - itemNum) * triggerWidth;
+
+    closeAllItems();
+
+    item.classList.add('.menu__item--active');
+    content.style.width = `${contentWidth}px`;
+    menuList.style.right = `-${listPosition}px`;
+}
+
+menuAcc.addEventListener('click', function(event) {
+    event.preventDefault();
+    const target = event.target;
+    const targetItem = target.closest('.menu__item');
+    if (target.closest('.menu__pic')) {
+        if (targetItem.classList.contains('.menu__item--active')) {
+            closeItem(targetItem);
+        }
+    }
+}) */
+
+
+
+/* let accItem = document.getElementsByClassName ('menu__item'),
+    menuAcc = document.querySelector ('.menu');
+    
+for (let i = 0; i < accItem.length; i++) {
+    accItem[i].addEventListener ('click', function (e) {
+        e.preventDefault();
+        if (! (this.classList.contains ('menu__item--active'))) {
+            for (let i = 0; i < accItem.length; i++) {
+                accItem[i].classList.remove ('menu__item--active');
+            }
+            this.classList.add ('menu__item--active');
+        }
+    });
+}
+
+menuAcc.addEventListener ('click', function (event) {
+    event.preventDefault();
+    let target = event.target;
+    if (! (target.closest ('.menu__accordeon'))) {
+        for (let i = 0; i < accItem.length; i++) {
+            accItem[i].classList.remove ('menu__item--active');
+        }
+    }
+});
+
+$(document).ready(() => {
+    let menuClose = $('.menu__close');
+    let menuItem = $('.menu__item');
+
+    menuClose.first().on('click', function() {
+        console.log(menuClose.first());
+        menuItem.first().removeClass('menu__item--active');    
+    });
+    menuClose.last().on('click', function() {
+        console.log(menuClose.last());
+        menuItem.last().removeClass('menu__item--active');    
+    });
+    menuClose.eq(1).on('click', function() {
+        console.log(menuClose.eq(1));
+        menuItem.eq(1).removeClass('menu__item--active');    
+    });
+}); */
+
 $(document).ready(function () {
+
+    $('.menu__pic').click(function (e) {
+        e.preventDefault();
+        $(this).closest('.menu__item').toggleClass('menu__item--active');
+        $('.menu__pic').not(this).closest('.menu__item').removeClass('menu__item--active');
+    });
 
     let menuClose = $('.menu__close');
     let menuItem = $('.menu__item');
-    let menu = $('.menu');
-    let menuTarget = $('.menu__pic');
 
-    menuTarget.on('click', function (e) {
-        e.preventDefault();
-        $(this).closest(menuItem).toggleClass('menu__item--active');
-        menuTarget.not(this).closest(menuItem).removeClass('menu__item--active');
+    menuClose.first().on('click', function() {
+        console.log(menuClose.first());
+        menuItem.first().removeClass('menu__item--active');    
     });
-
-    menuClose.on('click', function() {
-        $(this).closest(menuItem).removeClass('menu__item--active');    
+    menuClose.last().on('click', function() {
+        console.log(menuClose.last());
+        menuItem.last().removeClass('menu__item--active');    
     });
-
-    menu.on('click', function (event) {
-        event.preventDefault();
-        let target = event.target;
-        if (! (target.closest ('.menu__accordeon'))) {
-            for (let i = 0; i < menuItem.length; i++) {
-                menuItem[i].classList.remove ('menu__item--active');
-            }
-        }
+    menuClose.eq(1).on('click', function() {
+        console.log(menuClose.eq(1));
+        menuItem.eq(1).removeClass('menu__item--active');    
     });
 
 });
+
 
 /* TEAM ACCORD */
 

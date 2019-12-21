@@ -74,13 +74,13 @@
 
             &:before {
                 content: '';
-                border-bottom-width: 8px;
-                border-bottom-color: #f9b43b;
-                border-top-width: 0;
+                transform: rotate(-180deg);
+                transition: 0.3s;
             }
         }
         .team__content{
             height: 100%;
+            transition: height 0.5s;
         }
     }
 

@@ -110,6 +110,15 @@
     right: rem(25px);
     top: rem(15px);
     cursor: pointer;
+    display: none;
+
+    @include tablets {
+        display: block;
+    }
+
+    @include phones {
+        display: block;
+    }
 }
 
 .menu__cross {
