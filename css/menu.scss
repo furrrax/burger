@@ -42,7 +42,12 @@
             overflow: visible;
             background-color: rgba(49, 52, 54, .9);
             padding: rem(60px) rem(35px);
-            line-height: 1.5;
+            transition: width 0.6s;
+        }
+        .menu__text {
+            opacity: 1;
+            transition: opacity 0.6s;
+            transition-delay: 0.8s;
         }
     }
 }
@@ -51,6 +56,7 @@
     width: rem(80px);
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
 
     &--meat {
         background: url('/img/menu/for-meat-eater.jpg');
@@ -80,11 +86,16 @@
 .menu__desc {
     width: 0; 
     overflow: hidden;
+}
+
+.menu__text {
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
     font-size: rem(14px);
     color: $white;
+    line-height: 1.5;
+    opacity: 0;
 
     @include phones {
         font-size: rem(16px);

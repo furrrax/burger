@@ -1219,12 +1219,17 @@ section {
     overflow: visible;
     background-color: rgba(49, 52, 54, 0.9);
     padding: 3.75rem 2.1875rem;
-    line-height: 1.5; }
+    transition: width 0.6s; }
+  .menu__item--active .menu__text {
+    opacity: 1;
+    transition: opacity 0.6s;
+    transition-delay: 0.8s; }
 
 .menu__pic {
   width: 5rem;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-shrink: 0; }
   .menu__pic--meat {
     background: url("/img/menu/for-meat-eater.jpg");
     background-size: cover;
@@ -1247,14 +1252,18 @@ section {
 
 .menu__desc {
   width: 0;
-  overflow: hidden;
+  overflow: hidden; }
+
+.menu__text {
   font-family: 'ubuntu';
   font-weight: 300;
   font-style: normal;
   font-size: 0.875rem;
-  color: #fff; }
+  color: #fff;
+  line-height: 1.5;
+  opacity: 0; }
   @media screen and (max-width: 640px) {
-    .menu__desc {
+    .menu__text {
       font-size: 1rem;
       line-height: 200%; } }
 
@@ -1528,7 +1537,7 @@ section {
   align-items: center;
   justify-content: center;
   z-index: 100;
-  opacity: 0; }
+  opacity: .92; }
 
 .popup__window {
   padding: 1.875rem 1.25rem;
