@@ -35,7 +35,8 @@
 }
 
 .menu__item {
-    display: inline-flex;
+    display: flex;
+    justify-content: flex-end;
     &--active {
         .menu__desc {
             width: 100%;

@@ -1213,7 +1213,8 @@ section {
       max-width: 100%; } }
 
 .menu__item {
-  display: inline-flex; }
+  display: flex;
+  justify-content: flex-end; }
   .menu__item--active .menu__desc {
     width: 100%;
     overflow: visible;
