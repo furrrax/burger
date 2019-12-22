@@ -6,9 +6,11 @@ var hamburgerMenu = document.querySelector('.hamburger');
 
 hamburgerLink.addEventListener('click', function() {
     hamburgerMenu.style.display = "flex";
+    document.body.style.overflow = 'hidden';
 });
 hamburgerClose.addEventListener('click', function() {
     hamburgerMenu.style.display = "none";
+    document.body.style.overflow = 'visible';
 });
 
 /* SLIDER DROPDOWN */
