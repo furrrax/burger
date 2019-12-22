@@ -6,16 +6,34 @@
     bottom: 0;
     background: #2f3234;
     display: none;
-    align-items: center;
-    justify-content: center;
     z-index: 100;
 	transition: 0.6s;
 }
 
-.hamburger__logo {
-    position: absolute;
+.hamburger__container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.hamburger__menu-container {
+	position: absolute;
+    right: 0;
+    left: 0;
     top: rem(10px);
-    left: rem(25px);
+	z-index: 30;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hamburger__menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
 }
 
 .hamburger__img {
@@ -25,6 +43,7 @@
 
 .hamburger__items {
 	display: flex;
+    align-items: center;
 
 }
 
@@ -62,15 +81,14 @@
 }
 
 .hamburger__close {
-	top: rem(30px);
-	right: rem(30px);
+	position: relative;
 
 	@include tablets {
-		right: rem(60px);
+		/* right: rem(60px); */
 	}
 	
 	@include phones {
-		right: rem(17px);
+		/* right: rem(17px); */
 	}
 }
 
