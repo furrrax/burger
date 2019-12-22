@@ -10,7 +10,7 @@ hamburgerLink.addEventListener('click', function() {
 });
 hamburgerClose.addEventListener('click', function() {
     hamburgerMenu.style.display = "none";
-    document.body.style.overflow = 'visible';
+    document.body.style.overflow = 'auto';
 });
 
 /* SLIDER DROPDOWN */
@@ -67,29 +67,28 @@ $(document).ready(function () {
 
 /* TEAM ACCORD */
 
-let teamItem = document.getElementsByClassName ('team__item'),
-    teamSect = document.querySelector ('.team');
+$(document).ready(function () {
 
-for (let i = 0; i < teamItem.length; i++) {
-    teamItem[i].addEventListener ('click', function (e) {
+    let teamItem = $('.team__item');
+    let team = $('.team');
+    let teamTarget = $('.team__link');
+
+    teamTarget.on('click', function (e) {
         e.preventDefault();
-        if (! (this.classList.contains ('team__item--active'))) {
+        $(this).closest(teamItem).toggleClass('team__item--active');
+        teamTarget.not(this).closest(teamItem).removeClass('team__item--active');
+    });
+
+    team.on('click', function (event) {
+        event.preventDefault();
+        let target = event.target;
+        if (! (target.closest ('.team__accordeon'))) {
             for (let i = 0; i < teamItem.length; i++) {
                 teamItem[i].classList.remove ('team__item--active');
             }
-            this.classList.add ('team__item--active');
         }
     });
-}
 
-teamSect.addEventListener ('click', function (event) {
-    event.preventDefault();
-    let target = event.target;
-    if (! (target.closest ('.team__accordeon'))) {
-        for (let i = 0; i < teamItem.length; i++) {
-            teamItem[i].classList.remove ('team__item--active');
-        }
-    }
 });
 
 /* ОТПРАВКА ФОРМЫ */
@@ -140,6 +139,7 @@ sendBtn.addEventListener('click', event => {
 
             modalBtn.addEventListener('click', function() {
                 modalMessage.style.display = "none";
+                document.body.style.overflow = 'auto';
             });
 
             const xhr = new XMLHttpRequest();
@@ -151,9 +151,11 @@ sendBtn.addEventListener('click', event => {
                 if(xhr.status) {
                     modalMessage.style.display = "flex";
                     modalText.textContent = 'Сообщение отправлено';
+                    document.body.style.overflow = 'hidden';
                 } else {
                     modalMessage.style.display = "flex";
                     modalText.textContent = 'Произошла ошибка';
+                    document.body.style.overflow = 'hidden';
                 }
             });
         }
@@ -205,6 +207,7 @@ $(document).ready(()  => {
 
     popClose.on('click', function() {
         popup.animate({opacity: "0"}, 500);
+        $("body").css("overflow","auto");
 
         setTimeout(function(){
             popup.css('display', 'none');
@@ -217,6 +220,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').first().text(); 
         let revDesc = $('.reviews__desc').first().text();
@@ -229,6 +233,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').last().text(); 
         let revDesc = $('.reviews__desc').last().text();
@@ -241,6 +246,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').eq(1).text(); 
         let revDesc = $('.reviews__desc').eq(1).text();
@@ -253,6 +259,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').eq(2).text(); 
         let revDesc = $('.reviews__desc').eq(2).text();
@@ -265,6 +272,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').eq(3).text(); 
         let revDesc = $('.reviews__desc').eq(3).text();
@@ -277,6 +285,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').eq(4).text(); 
         let revDesc = $('.reviews__desc').eq(4).text();
@@ -289,6 +298,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').eq(5).text(); 
         let revDesc = $('.reviews__desc').eq(5).text();
@@ -301,6 +311,7 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
+        $("body").css("overflow","hidden");
 
         let revTitle = $('.reviews__title').eq(6).text(); 
         let revDesc = $('.reviews__desc').eq(6).text();
