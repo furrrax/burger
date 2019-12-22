@@ -15,11 +15,16 @@ body {
     position: relative;
 }
 
+.maincontent {
+    height: 100vh;
+    transition: transform 1s;
+}
+
 ul, p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
 }
-  
+
 li {
     list-style: none;
 }
@@ -43,7 +48,8 @@ a {
 }
 
 section {
-    min-height: rem(650px);
+//    min-height: rem(650px);
+    height: 100vh;
 }
 
 .title {

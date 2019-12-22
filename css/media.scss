@@ -23,9 +23,9 @@ $desktop: 1200px;
 
 html {
     @include tablets {
-      font-size: rem(14px);
+		font-size: rem(14px);
     }
     @include phones {
-      font-size: rem(13px);
+		font-size: rem(13px);
     }
 }

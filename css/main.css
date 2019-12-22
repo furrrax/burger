@@ -357,6 +357,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.maincontent {
+  height: 100vh;
+  transition: transform 1s; }
+
 ul, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
@@ -379,7 +383,7 @@ a {
       max-width: 30rem; } }
 
 section {
-  min-height: 40.625rem; }
+  height: 100vh; }
 
 .title {
   font-family: 'gagalin';
@@ -1546,6 +1550,9 @@ section {
     .pagination {
       display: none; } }
 
+.pagination__item--active .pagination__link {
+  border-color: #fff; }
+
 .pagination__link {
   display: block;
   height: 1.25rem;
@@ -1553,9 +1560,10 @@ section {
   border-radius: 50%;
   border: 0.0625rem solid transparent;
   margin-bottom: 0.1875rem;
-  position: relative; }
-  .pagination__link--active {
-    border-color: #fff; }
+  position: relative;
+  /* &--active {
+    border-color: $white;
+  } */ }
   .pagination__link:before {
     content: '';
     width: 0.375rem;

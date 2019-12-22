@@ -15,6 +15,14 @@
     }
 }
 
+.pagination__item {
+  &--active {
+    .pagination__link {
+      border-color: $white;
+    }
+  }
+}
+
 .pagination__link {
     display: block;
     height: rem(20px);
@@ -24,9 +32,9 @@
     margin-bottom: rem(3px);
     position: relative;
   
-    &--active {
+    /* &--active {
       border-color: $white;
-    }
+    } */
   
     &:before {
       content: '';
