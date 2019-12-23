@@ -1,0 +1,115 @@
+.work {
+    background: url('../img/work/work-bg.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.work__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.work__title {
+    font-family: 'gagalin';
+    font-weight: 400;
+    font-style: normal;
+    font-size: rem(60px);
+    color: #2f3234;
+    margin-bottom: rem(50px);
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    width: rem(660px);
+}
+
+.player__mainframe {
+    position: relative;
+}
+
+.player__yt {
+    background: url('../img/work/player-splash.jpg') center center no-repeat;
+    background-size: cover;
+    height: rem(370px);
+}
+
+.player__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .9;
+}
+
+.player__btn-play {
+    width: rem(80px);
+    height: rem(115px);
+    fill: $white;
+}
+
+.player__controls {
+    height: rem(35px);
+    background-color: #3e3e3e;
+    padding: 0 rem(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player__play {
+    display: flex;
+    align-items: center;
+    margin-right: rem(20px);
+    .player__btn-play {
+        fill: $grey;
+        width: rem(17px);
+        height: rem(22px);
+    }
+}
+
+.player__timeline {
+    position: relative;
+    width: rem(445px);
+    height: rem(4px);
+    background-color: $grey;
+    margin-right: auto;
+}
+
+.point {
+    position: absolute;
+    top: 50%;
+    width: rem(12px);
+    height: rem(12px);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $grey;
+}
+
+.player__volume {
+    display: flex;
+    align-items: center;
+    .player__volume-btn {
+        fill: $grey;
+        width: rem(17px);
+        height: rem(22px);
+    }
+}
+
+.player__volume-line {
+    position: relative;
+    width: rem(60px);
+    height: rem(4px);
+    background-color: $grey;
+    margin-left: rem(20px);
+}
+
+.player__btn-play, .player__timeline, .player__volume, .player__volume-line {
+    cursor: pointer;
+}

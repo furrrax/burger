@@ -2,6 +2,7 @@ $orange: #e45028;
 $white: #fff;
 $black: #2f3234;
 $yellow: #f9b43b;
+$grey: #626262;
 
 html {
     font-size: 16px;
@@ -20,6 +21,7 @@ html {
 @import "features.scss";
 @import "slider.scss";
 @import "reviews.scss";
+@import "work.scss";
 @import "delivery.scss";
 @import "team.scss";
 @import "menu.scss";

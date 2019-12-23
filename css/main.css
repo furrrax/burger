@@ -908,6 +908,105 @@ section {
     .reviews__button-link {
       font-size: 1rem; } }
 
+.work {
+  background: url("../img/work/work-bg.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: inherit;
+  display: flex;
+  align-items: center; }
+
+.work__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.work__title {
+  font-family: 'gagalin';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.75rem;
+  color: #2f3234;
+  margin-bottom: 3.125rem; }
+
+.player {
+  display: flex;
+  flex-direction: column;
+  width: 41.25rem; }
+
+.player__mainframe {
+  position: relative; }
+
+.player__yt {
+  background: url("../img/work/player-splash.jpg") center center no-repeat;
+  background-size: cover;
+  height: 23.125rem; }
+
+.player__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .9; }
+
+.player__btn-play {
+  width: 5rem;
+  height: 7.1875rem;
+  fill: #fff; }
+
+.player__controls {
+  height: 2.1875rem;
+  background-color: #3e3e3e;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.player__play {
+  display: flex;
+  align-items: center;
+  margin-right: 1.25rem; }
+  .player__play .player__btn-play {
+    fill: #626262;
+    width: 1.0625rem;
+    height: 1.375rem; }
+
+.player__timeline {
+  position: relative;
+  width: 27.8125rem;
+  height: 0.25rem;
+  background-color: #626262;
+  margin-right: auto; }
+
+.point {
+  position: absolute;
+  top: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #626262; }
+
+.player__volume {
+  display: flex;
+  align-items: center; }
+  .player__volume .player__volume-btn {
+    fill: #626262;
+    width: 1.0625rem;
+    height: 1.375rem; }
+
+.player__volume-line {
+  position: relative;
+  width: 3.75rem;
+  height: 0.25rem;
+  background-color: #626262;
+  margin-left: 1.25rem; }
+
+.player__btn-play, .player__timeline, .player__volume, .player__volume-line {
+  cursor: pointer; }
+
 .delivery {
   background: url("../img/delivery/delivery-bg.jpg") center center no-repeat;
   background-size: cover;
