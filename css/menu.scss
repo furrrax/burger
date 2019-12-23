@@ -11,6 +11,10 @@
     top: rem(110px);
     left: rem(95px);
     color: $white;
+
+    @include phones {
+        left: 5%;
+    }
 }
 
 .menu__accordeon {
