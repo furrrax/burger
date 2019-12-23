@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Бургер</title>
+    <title>Мистер Бургер</title>
 </head>
 <body>
     <div class="wrapper">
@@ -855,7 +855,7 @@
                                         <span class="delivery__radio-text">Потребуется сдача</span>
                                     </label>
                                     <label class="delivery__radio-label">
-                                        <input type="radio" class="delivery__radio-input" name="card">
+                                        <input type="radio" class="delivery__radio-input" name="cashback">
                                         <span class="delivery__radio-fake"></span>
                                         <span class="delivery__radio-text">Оплата по карте</span>
                                     </label>
@@ -878,6 +878,7 @@
             </section>
     
             <section class="section map">
+            	<div id="mapApi" style="width: 100vw; height: 100vh;"></div>
                 <footer class="footer">
                     <div class="footer__container container">
                         <div class="footer__contacts">
@@ -1023,6 +1024,7 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=96098ecd-c006-402a-bc68-8f32d0f2db73&lang=ru_RU" type="text/javascript"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

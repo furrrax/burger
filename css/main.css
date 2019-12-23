@@ -1071,13 +1071,11 @@ section {
     justify-content: center; } }
 
 .error {
-  /* position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: $white;
-  padding: rem(10px); */
-  color: #e45028;
-  /* display: none; */ }
+  font-family: 'ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.9375rem;
+  color: #e45028; }
 
 .team {
   background: url("../img/team/team-bg.jpg") center center no-repeat;

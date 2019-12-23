@@ -228,11 +228,9 @@
 }
 
 .error {
-    /* position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: $white;
-    padding: rem(10px); */
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-style: normal;
+    font-size: rem(15px);
     color: $orange;
-    /* display: none; */
 }
