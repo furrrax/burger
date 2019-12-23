@@ -346,10 +346,14 @@ template {
 * {
   box-sizing: border-box; }
 
+html {
+  height: 100%; }
+
 body {
   margin: 0rem;
   font-size: 1.125rem;
-  text-decoration: none; }
+  text-decoration: none;
+  height: 100%; }
 
 .wrapper {
   width: 100%;
@@ -358,7 +362,7 @@ body {
   position: relative; }
 
 .maincontent {
-  height: 100vh;
+  height: 100%;
   transition: transform 1s; }
 
 ul, p, h1, h2, h3, h4, h5, h6 {
@@ -384,6 +388,9 @@ a {
 
 section {
   height: 100vh; }
+  @media screen and (max-width: 640px) {
+    section {
+      height: 100%; } }
 
 .title {
   font-family: 'gagalin';
@@ -1441,7 +1448,10 @@ section {
 @media screen and (max-width: 960px) {
   .hamburger__nav .nav-item {
     position: relative;
-    margin-bottom: 3.125rem; }
+    margin-bottom: 3.125rem;
+    /* &:nth-child(6) {
+    	display: none;
+    } */ }
     .hamburger__nav .nav-item:last-child {
       margin-bottom: 0; }
     .hamburger__nav .nav-item:before {
@@ -1450,8 +1460,6 @@ section {
       left: 50%;
       transform: translate(-50%, -50%);
       margin: 0; }
-    .hamburger__nav .nav-item:nth-child(6) {
-      display: none; }
   .hamburger__nav .nav-link {
     font-size: 1.5rem;
     font-weight: 400; } }

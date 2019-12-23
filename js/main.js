@@ -13,6 +13,8 @@ hamburgerClose.addEventListener('click', function() {
     document.body.style.overflow = 'auto';
 });
 
+
+
 /* SLIDER DROPDOWN */
 
 const dropdownLink = document.querySelector('.slider__pic-up');
@@ -433,6 +435,8 @@ $('[data-scroll-to]').on('click', e => {
     e.preventDefault();
     const $this = $(e.currentTarget);
     const target = $this.attr('data-scroll-to');
+    hamburgerMenu.style.display = "none";
+    document.body.style.overflow = 'auto';
 
     performTransition(target);
 });
