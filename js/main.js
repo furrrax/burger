@@ -1,4 +1,4 @@
-/* HAMBURGER */
+//HAMBURGER 
 
 const hamburgerLink = document.querySelector('.hamburger__link');
 const hamburgerClose = document.querySelector('.hamburger__close');
@@ -15,7 +15,7 @@ hamburgerClose.addEventListener('click', function() {
 
 
 
-/* SLIDER DROPDOWN */
+//SLIDER DROPDOWN 
 
 const dropdownLink = document.querySelector('.slider__pic-up');
 const sliderDropdown = document.querySelector('.slider__dropdown');
@@ -36,7 +36,7 @@ dropdownLink.addEventListener('mouseout', function(e) {
     dropdownLink.style.backgroundColor = "#f08c33";
 });
 
-/* MENU ACCORD */
+//MENU ACCORD
 
 $(document).ready(function () {
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
 
 });
 
-/* TEAM ACCORD */
+//TEAM ACCORD
 
 $(document).ready(function () {
 
@@ -93,7 +93,7 @@ $(document).ready(function () {
 
 });
 
-/* ОТПРАВКА ФОРМЫ */
+//ОТПРАВКА ФОРМЫ 
 
 const delPhone = document.querySelector('.delivery__phone');
 
@@ -147,7 +147,6 @@ sendBtn.addEventListener('click', event => {
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
             xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-//            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             xhr.send(formData);
             xhr.addEventListener('load', () => {
                 if(xhr.status) {
@@ -199,7 +198,7 @@ function validateField(field) {
     return field.checkValidity();
 }
 
-/* REVIEWS POPUP */
+//REVIEWS POPUP
 
 const revBtn = $('.reviews__button');
 const popClose = $('.popup__close');
@@ -324,7 +323,7 @@ $(document).ready(()  => {
 
 });
 
-/* SLIDER */
+//SLIDER 
 
 const prev = document.querySelector ('.slider__prev');
 const next = document.querySelector ('.slider__next');
@@ -364,7 +363,7 @@ next.addEventListener('click', e => {
     }
 });
 
-/* OPS */
+//OPS
 
 const sections = $('.section');
 const display = $('.maincontent');
