@@ -526,10 +526,7 @@ ymaps.ready(function () {
     myMap.controls.remove('fullscreenControl');
     myMap.controls.remove('trafficControl');
     myMap.controls.remove('typeSelector');
-<<<<<<< HEAD
     myMap.behaviors.disable('scrollZoom');
-=======
->>>>>>> c6bbe0ada31615f5ce5e6357bc20082e2f5aa534
 });
 
 //VIDEOPLAYER
@@ -616,18 +613,3 @@ $('.player__timeline').on('click', e => {
 
 	durationPointer.style.left = btnPositionPercent + '%';
 });
-
-<<<<<<< HEAD
-var vidMute = $('.player__volume-btn');
-
-$('.player__volume-btn').on('click', function () {
-    $('.player__video').muted = !($('.player__video').muted);
-    return false;
-});
-=======
-
->>>>>>> c6bbe0ada31615f5ce5e6357bc20082e2f5aa534
-
-
-
-
