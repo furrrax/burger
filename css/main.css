@@ -919,8 +919,7 @@ section {
 .work__container {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 41.25rem; }
+  flex-direction: column; }
 
 .work__title {
   font-family: 'gagalin';
@@ -936,19 +935,21 @@ section {
 .player {
   display: flex;
   flex-direction: column;
-  width: 41.25rem; }
-  @media screen and (max-width: 640px) {
-    .player {
-      width: 28.75rem;
-      /* height: rem(255px); */ } }
+    /* width: rem(660px);
+
+    @include tablets {
+        width: auto;
+    } */ }
 
 .player__mainframe {
-  position: relative; }
-
-.player__yt {
-  background: url("../img/work/player-splash.jpg") center center no-repeat;
-  background-size: cover;
-  height: 23.125rem; }
+  position: relative;
+  /* height: rem(370px); */
+  /* @include tablets {
+      height: rem(408px);
+  } */
+  /* @include phones {
+      height: rem(255px);
+  } */ }
 
 .player__btn {
   position: absolute;
@@ -968,7 +969,14 @@ section {
   padding: 0 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  top: 99%; }
+  @media screen and (max-width: 960px) {
+    .player__controls {
+      top: 98%; } }
 
 .player__play {
   display: flex;
@@ -981,10 +989,13 @@ section {
 
 .player__timeline {
   position: relative;
-  width: 27.8125rem;
+  width: 70%;
   height: 0.25rem;
   background-color: #626262;
   margin-right: auto; }
+  @media screen and (max-width: 960px) {
+    .player__timeline {
+      width: 95%; } }
 
 .point {
   position: absolute;
@@ -992,7 +1003,7 @@ section {
   width: 0.75rem;
   height: 0.75rem;
   top: 50%;
-  left: 50%;
+  left: 0;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   background-color: #626262; }
@@ -1004,15 +1015,49 @@ section {
     fill: #626262;
     width: 1.0625rem;
     height: 1.375rem; }
+  @media screen and (max-width: 960px) {
+    .player__volume {
+      display: none; } }
+
+/* .player__volume-line {
+    position: relative;
+    width: rem(60px);
+    height: rem(4px);
+    background-color: $grey;
+    margin-left: rem(20px);
+
+    @include tablets {
+        display: none;
+    }
+} */
+.player__btn-play, .player__timeline, .player__volume, .player__volume-line {
+  cursor: pointer; }
 
 .player__volume-line {
-  position: relative;
-  width: 3.75rem;
-  height: 0.25rem;
-  background-color: #626262;
   margin-left: 1.25rem; }
 
-.player__btn-play, .player__timeline, .player__volume, .player__volume-line {
+.player__volume-line {
+  -webkit-appearance: none;
+  width: 60px;
+  height: 4px;
+  border-radius: 5px;
+  background: #626262;
+  outline: none; }
+
+.player__volume-line::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #626262;
+  cursor: pointer; }
+
+.player__volume-line::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #626262;
   cursor: pointer; }
 
 .delivery {
