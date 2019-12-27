@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+/* html {
+    height: 100%;
+} */
+
+body {
+    margin: rem(0px);
+    font-size: rem(18px);
+    text-decoration: none;
+    /* height: 100%; */
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.maincontent {
+    height: 100vh;
+    transition: transform 1s;
+}
+
+ul, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 95%;
+    max-width: rem(940px);
+    margin: 0 auto;
+
+    @include tablets {
+        max-width: rem(720px);
+    }
+
+    @include phones {
+        max-width: rem(480px);
+    }
+}
+
+section {
+    height: 100vh;
+
+    @include phones {
+        height: 100%;
+    }
+}
+
+.title {
+    font-family: 'gagalin';
+    font-weight: 400;
+    font-style: normal;
+    font-size: rem(72px);
+    color: $yellow;
+}
+
+.button {
+    border-radius: rem(5px);
+    padding: rem(10px) rem(15px);
+    background-color: $orange;
+    font-family: 'ubuntu';
+    font-weight: 500;
+    font-style: normal;
+    font-size: rem(13px);
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.random {
+    color: white;
+}

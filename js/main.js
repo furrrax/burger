@@ -13,8 +13,6 @@ hamburgerClose.addEventListener('click', function() {
     $('.hamburger').removeClass('hamburger__active');
 });
 
-
-
 //SLIDER DROPDOWN 
 
 const dropdownLink = document.querySelector('.slider__pic-up');
@@ -64,7 +62,6 @@ $(document).ready(function () {
             }
         }
     });
-
 });
 
 //TEAM ACCORD
@@ -90,7 +87,6 @@ $(document).ready(function () {
             }
         }
     });
-
 });
 
 //ОТПРАВКА ФОРМЫ 
