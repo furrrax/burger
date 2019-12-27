@@ -3,6 +3,7 @@
 const hamburgerLink = document.querySelector('.hamburger__link');
 const hamburgerClose = document.querySelector('.hamburger__close');
 var hamburgerMenu = document.querySelector('.hamburger');
+var hambLink = document.querySelector('.hamb');
 
 hamburgerLink.addEventListener('click', function() {
     hamburgerMenu.style.display = "flex";
@@ -10,6 +11,11 @@ hamburgerLink.addEventListener('click', function() {
 });
 hamburgerClose.addEventListener('click', function() {
     hamburgerMenu.style.display = "none";
+    $('.hamburger').removeClass('hamburger__active');
+});
+
+$('.hamb').on('click', function() {
+    $('.hamburger').css('display', 'none');
     $('.hamburger').removeClass('hamburger__active');
 });
 
@@ -236,7 +242,8 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
+
+        $('.popup').addClass('popup__active');
 
         let revTitle = $('.reviews__title').last().text(); 
         let revDesc = $('.reviews__desc').last().text();
@@ -249,7 +256,8 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
+
+        $('.popup').addClass('popup__active');
 
         let revTitle = $('.reviews__title').eq(1).text(); 
         let revDesc = $('.reviews__desc').eq(1).text();
@@ -262,8 +270,9 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
 
+        $('.popup').addClass('popup__active');
+        
         let revTitle = $('.reviews__title').eq(2).text(); 
         let revDesc = $('.reviews__desc').eq(2).text();
 
@@ -275,7 +284,8 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
+
+        $('.popup').addClass('popup__active');
 
         let revTitle = $('.reviews__title').eq(3).text(); 
         let revDesc = $('.reviews__desc').eq(3).text();
@@ -288,8 +298,9 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
 
+        $('.popup').addClass('popup__active');
+        
         let revTitle = $('.reviews__title').eq(4).text(); 
         let revDesc = $('.reviews__desc').eq(4).text();
 
@@ -301,7 +312,8 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
+
+        $('.popup').addClass('popup__active');
 
         let revTitle = $('.reviews__title').eq(5).text(); 
         let revDesc = $('.reviews__desc').eq(5).text();
@@ -314,7 +326,8 @@ $(document).ready(()  => {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
+
+        $('.popup').addClass('popup__active');
 
         let revTitle = $('.reviews__title').eq(6).text(); 
         let revDesc = $('.reviews__desc').eq(6).text();
