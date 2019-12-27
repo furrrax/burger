@@ -3,7 +3,6 @@
 const hamburgerLink = document.querySelector('.hamburger__link');
 const hamburgerClose = document.querySelector('.hamburger__close');
 var hamburgerMenu = document.querySelector('.hamburger');
-var hambLink = document.querySelector('.hamb');
 
 hamburgerLink.addEventListener('click', function() {
     hamburgerMenu.style.display = "flex";
