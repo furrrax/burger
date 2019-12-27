@@ -1396,7 +1396,7 @@ section {
   right: 0;
   bottom: 0;
   display: flex;
-  max-width: 50%; }
+  max-width: 70%; }
   @media screen and (max-width: 960px) {
     .menu__accordeon {
       max-width: 100%; } }
@@ -1408,10 +1408,13 @@ section {
   display: flex;
   justify-content: flex-end; }
   .menu__item--active .menu__desc {
-    width: 100%;
-    overflow: visible;
-    background-color: rgba(49, 52, 54, 0.9);
-    padding: 3.125rem 2.1875rem; }
+    width: 30rem; }
+    @media screen and (max-width: 960px) {
+      .menu__item--active .menu__desc {
+        width: 22rem; } }
+    @media screen and (max-width: 640px) {
+      .menu__item--active .menu__desc {
+        width: 16.25rem; } }
   .menu__item--active .menu__text {
     opacity: 1;
     transition: opacity 0.6s;
@@ -1446,7 +1449,8 @@ section {
   width: 0;
   overflow: hidden;
   position: relative;
-  transition: width 0.6s; }
+  transition: width 0.6s;
+  background-color: rgba(49, 52, 54, 0.9); }
 
 .menu__text {
   font-family: 'ubuntu';
@@ -1455,7 +1459,8 @@ section {
   font-size: 0.875rem;
   color: #fff;
   line-height: 1.5;
-  opacity: 0; }
+  opacity: 0;
+  padding: 3.125rem 2.1875rem; }
   @media screen and (max-width: 640px) {
     .menu__text {
       font-size: 1rem;

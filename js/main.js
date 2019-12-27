@@ -6,11 +6,11 @@ var hamburgerMenu = document.querySelector('.hamburger');
 
 hamburgerLink.addEventListener('click', function() {
     hamburgerMenu.style.display = "flex";
-    document.body.style.overflow = 'hidden';
+    $('.hamburger').addClass('hamburger__active');
 });
 hamburgerClose.addEventListener('click', function() {
     hamburgerMenu.style.display = "none";
-    document.body.style.overflow = 'auto';
+    $('.hamburger').removeClass('hamburger__active');
 });
 
 
@@ -142,6 +142,7 @@ sendBtn.addEventListener('click', event => {
             modalBtn.addEventListener('click', function() {
                 modalMessage.style.display = "none";
                 document.body.style.overflow = 'auto';
+                $('.modal').removeClass('modal__active');
             });
 
             const xhr = new XMLHttpRequest();
@@ -152,11 +153,16 @@ sendBtn.addEventListener('click', event => {
                 if(xhr.status) {
                     modalMessage.style.display = "flex";
                     modalText.textContent = 'Сообщение отправлено';
-                    document.body.style.overflow = 'hidden';
+                    sendBtn.disabled = true;
+                    $('.modal').addClass('modal__active');
                 } else {
                     modalMessage.style.display = "flex";
                     modalText.textContent = 'Произошла ошибка';
-                    document.body.style.overflow = 'hidden';
+                    $('.modal').addClass('modal__active');
+
+                    setTimeout(function(){
+                        sendBtn.disabled = false;
+                    },10000);
                 }
             });
         }
@@ -208,20 +214,20 @@ $(document).ready(()  => {
 
     popClose.on('click', function() {
         popup.animate({opacity: "0"}, 500);
-        $("body").css("overflow","auto");
 
         setTimeout(function(){
             popup.css('display', 'none');
         },500);
-        
-        
+
+        $('.popup').removeClass('popup__active');
     });
 
     revBtn.first().on('click', function(e) {
         e.preventDefault();
         popup.css('display', 'flex');
         popup.animate({opacity: ".92"}, 500);
-        $("body").css("overflow","hidden");
+
+        $('.popup').addClass('popup__active');
 
         let revTitle = $('.reviews__title').first().text(); 
         let revDesc = $('.reviews__desc').first().text();
@@ -389,6 +395,11 @@ const performTransition = sectionEq => {
 };
 
 const scrollToSection = direction => {
+
+    if ( $('.hamburger').hasClass('hamburger__active') ) return;
+    if ( $('.modal').hasClass('modal__active') ) return;
+    if ( $('.popup').hasClass('popup__active') ) return;
+
     const activeSection = sections.filter('.active');
     const nextSection = activeSection.next();
     const prevSection = activeSection.prev();
