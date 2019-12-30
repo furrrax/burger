@@ -29,32 +29,43 @@ task('clean', () => {
 })
 
 task('copy:html', () => {
-    return src('*.html')
+    return src('src/*.html')
         .pipe(dest(DIST_PATH))
         .pipe(reload({ stream: true }));
 })
 
+task('copy:css', () => {
+    return src('node_modules/normalize.css/normalize.css')
+        .pipe(dest('dist/css'))
+        .pipe(reload({ stream: true }));
+})
+
+task('copy:js', () => {
+    return src('node_modules/jquery/dist/jquery.min.js')
+        .pipe(dest('dist/js'))
+        .pipe(reload({ stream: true }));
+})
+
 task('copy:fonts', () => {
-    return src('fonts/**/*.*')
+    return src('src/fonts/**/*.*')
         .pipe(dest('dist/fonts'))
         .pipe(reload({ stream: true }));
 })
 
 task('copy:img', () => {
-    return src('img/**/*.*')
+    return src('src/img/**/*.*')
         .pipe(dest('dist/img'))
         .pipe(reload({ stream: true }));
 })
 
 task('copy:video', () => {
-    return src('video/*.mp4')
+    return src('src/video/*.mp4')
         .pipe(dest('dist/video'))
         .pipe(reload({ stream: true }));
 })
 
 const styles = [
-    'node_modules/normalize.css/normalize.css',
-    'css/main.scss'
+    'src/css/main.scss'
 ];
 
 task('styles', () => {
@@ -76,9 +87,7 @@ task('styles', () => {
 });
 
 const libs = [
-    'node_modules/jquery/dist/jquery.js',
-    'js/*.js',
-    '!js/jquery-3.4.1.min.js'
+    'src/js/*.js'
 ];
 
 task('scripts', () => {
@@ -104,9 +113,9 @@ task('server', () => {
 });
 
 task('watch', () => {
-    watch('./css/*.scss', series('styles'));
-    watch('./*.html', series('copy:html'));
-    watch('./js/*.js', series('scripts'));
+    watch('./src/css/*.scss', series('styles'));
+    watch('./src/*.html', series('copy:html'));
+    watch('./src/js/*.js', series('scripts'));
 })
 
 
@@ -114,12 +123,12 @@ task(
     'default', 
     series(
         'clean', 
-        parallel('copy:html', 'copy:fonts', 'copy:img', 'copy:video', 'styles', 'scripts'), 
+        parallel('copy:html', 'copy:css', 'copy:js', 'copy:fonts', 'copy:img', 'copy:video', 'styles', 'scripts'), 
         parallel('watch', 'server')
     )
 );
 
 task(
     'build', 
-    series('clean', parallel('copy:html', 'copy:fonts', 'copy:img', 'copy:video', 'styles', 'scripts'))
+    series('clean', parallel('copy:html', 'copy:css', 'copy:js', 'copy:fonts', 'copy:img', 'copy:video', 'styles', 'scripts'))
 );
