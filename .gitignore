@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 /css/*.scss
+=======
+node_modules
+*.stackdump
+>>>>>>> week_5

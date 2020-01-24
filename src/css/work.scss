@@ -1,0 +1,150 @@
+.work {
+    background: url('../img/work/work-bg.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.work__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.work__title {
+    font-family: 'gagalin';
+    font-weight: 400;
+    font-style: normal;
+    font-size: rem(60px);
+    color: #2f3234;
+    margin-bottom: rem(50px);
+
+    @include phones {
+        font-size: rem(40px);
+    }
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+}
+
+.player__mainframe {
+    position: relative;
+}
+
+.player__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .9;
+}
+
+.player__btn-play {
+    width: rem(80px);
+    height: rem(115px);
+    fill: $white;
+}
+
+.player__controls {
+    height: rem(35px);
+    background-color: #3e3e3e;
+    padding: 0 rem(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    top: 99%;
+
+    @include tablets {
+        top: 98%;
+    }
+}
+
+.player__play {
+    display: flex;
+    align-items: center;
+    margin-right: rem(20px);
+    .player__btn-play {
+        fill: $grey;
+        width: rem(17px);
+        height: rem(22px);
+    }
+}
+
+.player__timeline {
+    position: relative;
+    width: 70%;
+    height: rem(4px);
+    background-color: $grey;
+    margin-right: auto;
+
+    @include tablets {
+        width: 95%;
+    }
+}
+
+.point {
+    position: absolute;
+    top: 50%;
+    width: rem(12px);
+    height: rem(12px);
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $grey;
+}
+
+.player__volume {
+    display: flex;
+    align-items: center;
+    .player__volume-btn {
+        fill: $grey;
+        width: rem(17px);
+        height: rem(22px);
+    }
+    @include tablets {
+        display: none;
+    }
+}
+
+.player__btn-play, .player__timeline, .player__volume, .player__volume-line {
+    cursor: pointer;
+}
+
+.player__volume-line {
+    margin-left: rem(20px);
+}
+
+.player__volume-line {
+    -webkit-appearance: none;
+    width: 60px;
+    height: 4px;
+    border-radius: 5px;
+    background: $grey;
+    outline: none;
+}
+
+.player__volume-line::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $grey;
+    cursor: pointer;
+}
+
+.player__volume-line::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $grey;
+    cursor: pointer;
+}

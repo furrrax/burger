@@ -1,0 +1,72 @@
+/* WELCOME */
+
+.welcome {
+    background: url('../img/welcome/background.jpg') center center no-repeat;
+    background-size: cover;
+    overflow: inherit;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.welcome__container {
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.banner__img {
+    width: rem(451px);
+    height: rem(424px);
+}
+
+.banner__description {
+    padding-left: rem(28px);
+    padding-top: rem(137px);
+
+    @include tablets {
+        padding: 0;
+        text-align: center;
+        margin-top: rem(42px);
+        max-width: rem(600px);
+    }
+}
+
+.banner__title {
+    display: inline-block;
+}
+
+.banner__text {
+    font-family: 'lifehack';
+    font-weight: 500;
+    font-style: normal;
+    font-size: rem(65px);
+    color: $white;
+    display: inline-block;
+    margin-top: rem(19px);
+    line-height: rem(61px);
+    letter-spacing: rem(-2px);
+}
+
+.welcome__arrow {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: rem(40px);
+}
+
+.arrow {
+    fill: $white;
+    width: rem(29px);
+    height: rem(14px);
+}
