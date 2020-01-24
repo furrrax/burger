@@ -489,7 +489,7 @@ ymaps.ready(function () {
             hintContent: 'Здесь вкусные бургеры',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/img/svg/map-marker.svg',
+            iconImageHref: './img/svg/map-marker.svg',
             iconImageSize: [46, 58],
         }),
 
@@ -497,7 +497,7 @@ ymaps.ready(function () {
             hintContent: 'Приход к нам',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/img/svg/map-marker.svg',
+            iconImageHref: './img/svg/map-marker.svg',
             iconImageSize: [46, 58],
         }),
 
@@ -505,7 +505,7 @@ ymaps.ready(function () {
             hintContent: 'Мммм, пальчики оближешь!',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/img/svg/map-marker.svg',
+            iconImageHref: './img/svg/map-marker.svg',
             iconImageSize: [46, 58],
         }),
 
@@ -513,7 +513,7 @@ ymaps.ready(function () {
             hintContent: 'У нас вкусно!',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/img/svg/map-marker.svg',
+            iconImageHref: './img/svg/map-marker.svg',
             iconImageSize: [46, 58],
         }),
 
@@ -521,7 +521,7 @@ ymaps.ready(function () {
             hintContent: 'Хочешь сочный бургер?',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/img/svg/map-marker.svg',
+            iconImageHref: './img/svg/map-marker.svg',
             iconImageSize: [46, 58],
         }),
 
@@ -529,7 +529,7 @@ ymaps.ready(function () {
             hintContent: 'Приходи, мы вкусно накормим!',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/img/svg/map-marker.svg',
+            iconImageHref: './img/svg/map-marker.svg',
             iconImageSize: [46, 58],
         });
 

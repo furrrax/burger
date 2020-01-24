@@ -1,5 +1,5 @@
 .menu {
-    background: url('/img/menu/menu-bg.jpg') center center no-repeat;
+    background: url('../img/menu/menu-bg.jpg') center center no-repeat;
     background-size: cover;
     overflow: inherit;
     height: 100vh;
@@ -70,17 +70,17 @@
     flex-shrink: 0;
 
     &--meat {
-        background: url('/img/menu/for-meat-eater.jpg');
+        background: url('../img/menu/for-meat-eater.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
     &--veg {
-        background: url('/img/menu/for-vegetarian.jpg');
+        background: url('../img/menu/for-vegetarian.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
     &--diet {
-        background: url('/img/menu/for-dietary.jpg');
+        background: url('../img/menu/for-dietary.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
